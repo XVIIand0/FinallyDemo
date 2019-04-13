@@ -42,18 +42,18 @@ aside img{
     text-decoration: none;
 }
 .page-main > aside {
-    background-color: rgba(0,0,0,0.4);
-    width: 350px;
+    background-color: rgba(0,0,0,0.2);
+    width: 400px;
     height: 100%;
     top: 0;
-    left: -350px;
+    left: -400px;
     position: fixed;
 }
 
 .page-main > aside ul {
     margin: 0;
-    padding: 0;
- 
+
+ 	padding-top:100px;
     left: 114px;
     position: absolute;
 }
@@ -64,17 +64,125 @@ aside img{
 }
 
 .qq {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     display: block;
     position: absolute;
-    left: 350px;
-    width: 50px;
-    height: 75px;
-    margin: 0;
+    left: 400px;
+    width: 48px;
+    height: 48px;
     padding: 0;
     border: none;
 }
+@-webkit-keyframes pic {
+    0% {
+      -webkit-transform: rotate(0deg) ;
+    }
+    10%{
+    	-webkit-transform: rotate(36deg) ;
+      
+    }
+    20% {
+      -webkit-transform: rotate(54deg) ;
+      
+    }
+    30% {
+      -webkit-transform: rotate(108deg);
+      
+    }
+    40% {
+      -webkit-transform: rotate(144deg);
+      
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+      
+    }
+    60% {
+      -webkit-transform: rotate(216deg) ;
+      
+    }
+    70% {
+      -webkit-transform: rotate(254deg) ;
+      
+    }
+    80% {
+      -webkit-transform: rotate(288deg) ;
+      
+    }
+    90% {
+      -webkit-transform: rotate(324deg) ;
+      
+    }
+    100% {
+      -webkit-transform: rotate(360deg) ;
+      
+    }
+  }
 
+  @-moz-keyframes pic {
+    0% {
+      -moz-transform: rotate(0deg) ;
+    }
+    20%{
+    	-moz-transform: rotate(180deg) ;
+      
+    }
+    40% {
+      -moz-transform: rotate(60deg) ;
+      
+    }
+    60% {
+      -moz-transform: rotate(90deg);
+      
+    }
+    80% {
+      -moz-transform: rotate(120deg);
+      
+    }
+    90% {
+      -moz-transform: rotate(150deg) ;
+      
+    }
+    100% {
+      -moz-transform: rotate(180deg) ;
+      
+    }
+  }
+
+.qq:hover img{
+	 animation-name: pic;  /*动画名字是pic，与上面定义的名字一样*/
+      -webkit-animation-name: pic;
+      -moz-animation-name: pic;
+      -ms-animation-name: pic;
+      -o-animation-name: pic;
+      animation-duration: 0.75s;  /*动画用时1s*/
+      -webkit-animation-duration: 0.75s;
+      -moz-animation-duration: 0.75s;
+      -ms-animation-duration: 0.75s;
+      -o-animation-duration: 0.75s;
+      animation-timing-function: linear;  /*匀速动画*/
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+      -o-animation-timing-function: linear;
+}
+.opened:hover img{
+	 animation-name: pic;  /*动画名字是pic，与上面定义的名字一样*/
+      -webkit-animation-name: pic;
+      -moz-animation-name: pic;
+      -ms-animation-name: pic;
+      -o-animation-name: pic;
+      animation-duration: 0.75s;  /*动画用时1s*/
+      -webkit-animation-duration: 0.75s;
+      -moz-animation-duration: 0.75s;
+      -ms-animation-duration: 0.75s;
+      -o-animation-duration: 0.75s;
+      animation-timing-function: linear;  /*匀速动画*/
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+      -o-animation-timing-function: linear;
+}
 /* Clearfix */
 .clearfix:before,
 .clearfix:after {
@@ -93,13 +201,12 @@ aside .person{
 	height: 150px;
 }
 .opened{
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.0);
     display: block;
     position: absolute;
-    left: 300px;
-    width: 50px;
-    height: 75px;
-    margin: 0;
+    left: 350px;
+    width: 48px;
+    height: 48px;
     padding: 0;
     border: none;
 }
@@ -117,16 +224,37 @@ aside .person{
             filter: blur(15px);
             position: absolute; top: 0px; left: 0px; height: 100%; 
         }
+.close_img{
+	width: 36px;
+    height: 36px;
+    margin:0 auto;
+}
+.bar_title{
+	width:320px;
+    height: 42px;
+    font-size:24px;
+    padding-top:5px;
+    padding-left:80px;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+}
+.mark{
+	width: 36px;
+    height: 36px;
+    padding-right:10px;
+    padding-left:10px;
+}
 </style>
 <body >
 <img class="img_bg"  src="back.png">
 	<div class="page-main" role="main">
     <aside>
-    		<div>
-    			
+    		<div class="bar_title">
+    			<img class="mark" src="mushrooms.png">
+    			 Murshroom Hunter
     		</div>
         <ul>
-        	<li>香菇獵人</li>
+        	
         	<li>
         		<div class="person">
         			<img src="10544146.jpg"><span>嗨又諄</span>
@@ -136,7 +264,7 @@ aside .person{
             <li><a href="#">Love</a></li>
             <li><a href="#">Buy</a></li>
         </ul>
-        <button class="qq"><img src="https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png"></button>
+        <button class="qq"><img class="close_img" src="menu.png"></button>
     </aside>
 </div>
 <div >
@@ -144,7 +272,7 @@ aside .person{
 <script src="jquery-3.2.1.min.js"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+<script src="jquery-ui.min.js"></script>
 
 <script>
 	$(function(){
@@ -161,13 +289,13 @@ aside .person{
                 $('.img_bg').toggleClass('img_hide');
                 $('.qq').toggleClass('opened');
                 $('.qq').removeClass('qq');
-                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5635/31065147822_9b6e31ab5f_o.png');
+                $asidButton.find('img').attr('src', 'close.png');
             }else{
-                $aside.stop(true).animate({left: '-350px'}, duration, 'easeInBack');
+                $aside.stop(true).animate({left: '-400px'}, duration, 'easeInBack');
                 $('.img_bg').removeClass('img_hide');
                 $('.opened').toggleClass('qq');
                 $('.opened').removeClass('opened');               
-                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png');
+                $asidButton.find('img').attr('src', 'menu.png');
             };
         });
 
