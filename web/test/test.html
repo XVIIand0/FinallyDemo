@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+
+</head>
+
+<style type="text/css" media="screen">
+	html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    background-image:url('back.png'); 
+
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    outline: none;
+}
+aside img{
+    width: 50px;
+    height: auto;
+    z-index: 111111;
+}
+
+.page-main {
+    position: relative;
+}
+.page-main ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+.page-main ul li a:hover{
+    color:#8595ff;
+    text-decoration: none;
+}
+.page-main > aside {
+    background-color: rgba(0,0,0,0.1);
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: -350px;
+    position: fixed;
+}
+
+.page-main > aside ul {
+    margin: 0;
+    padding: 0;
+ 
+    left: 114px;
+    position: absolute;
+}
+
+.page-main > aside li {
+    margin: 0 0 20px;
+    list-style: none;
+}
+
+.qq {
+    background-color: rgba(0,0,0,0.2);
+    display: block;
+    position: absolute;
+    left: 350px;
+    width: 50px;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+aside span{
+	color: #FFF;
+}
+aside .person{
+	width: 200px;
+	height: 150px;
+}
+.opened{
+	background-color: rgba(0,0,0,0.2);
+    display: block;
+    position: absolute;
+    left: 300px;
+    width: 50px;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+</style>
+<body>
+
+	<div class="page-main" role="main">
+    <aside>
+    		<div>
+    			
+    		</div>
+        <ul>
+        	<li>香菇獵人</li>
+        	<li>
+        		<div class="person">
+        			<img src="10544146.jpg"><span>嗨又諄</span>
+        		</div>
+        	</li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Love</a></li>
+            <li><a href="#">Buy</a></li>
+        </ul>
+        <button class="qq"><img src="https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png"></button>
+    </aside>
+</div>
+<script src="jquery-3.2.1.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+	$(function(){
+    // 
+    var duration = 300;
+
+    // aside ----------------------------------------
+    var $aside = $('.page-main > aside');
+    var $asidButton = $aside.find('.qq')
+        .on('click', function(){
+            $aside.toggleClass('open');
+            if($aside.hasClass('open')){
+                $aside.stop(true).animate({left: '-70px'}, duration, 'easeOutBack');
+                $
+                $('.qq').toggleClass('opened');
+                $('.qq').removeClass('qq');
+                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5635/31065147822_9b6e31ab5f_o.png');
+            }else{
+                $aside.stop(true).animate({left: '-350px'}, duration, 'easeInBack');
+                $('.opened').toggleClass('qq');
+                $('.opened').removeClass('opened');               
+                $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png');
+            };
+        });
+
+});
+
+</script>
+</body>
+</html>
