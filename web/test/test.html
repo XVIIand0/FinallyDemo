@@ -13,8 +13,8 @@
 }
 
 body {
-    background-image:url('back.png'); 
-
+    
+	
 }
 
 img {
@@ -42,7 +42,7 @@ aside img{
     text-decoration: none;
 }
 .page-main > aside {
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.4);
     width: 350px;
     height: 100%;
     top: 0;
@@ -103,9 +103,23 @@ aside .person{
     padding: 0;
     border: none;
 }
+.img_bg{
+	position: absolute;
+ 	top: 0px;
+	left: 0px;
+  	height: 100%; 	   
+}
+.img_hide{
+			-webkit-filter: blur(15px);
+           -moz-filter: blur(15px);
+            -o-filter: blur(15px);
+            -ms-filter: blur(15px);
+            filter: blur(15px);
+            position: absolute; top: 0px; left: 0px; height: 100%; 
+        }
 </style>
-<body>
-
+<body >
+<img class="img_bg"  src="back.png">
 	<div class="page-main" role="main">
     <aside>
     		<div>
@@ -125,6 +139,8 @@ aside .person{
         <button class="qq"><img src="https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png"></button>
     </aside>
 </div>
+<div >
+</div>
 <script src="jquery-3.2.1.min.js"></script>
 
 
@@ -142,12 +158,13 @@ aside .person{
             $aside.toggleClass('open');
             if($aside.hasClass('open')){
                 $aside.stop(true).animate({left: '-70px'}, duration, 'easeOutBack');
-                $
+                $('.img_bg').toggleClass('img_hide');
                 $('.qq').toggleClass('opened');
                 $('.qq').removeClass('qq');
                 $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5635/31065147822_9b6e31ab5f_o.png');
             }else{
                 $aside.stop(true).animate({left: '-350px'}, duration, 'easeInBack');
+                $('.img_bg').removeClass('img_hide');
                 $('.opened').toggleClass('qq');
                 $('.opened').removeClass('opened');               
                 $asidButton.find('img').attr('src', 'https://c2.staticflickr.com/6/5555/31208490685_5c55f2f28f_o.png');
