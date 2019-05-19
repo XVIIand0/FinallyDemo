@@ -5,15 +5,19 @@
 	<title>商品頁面</title>
 	<link rel="stylesheet" href="nav_css.css">
 	<link rel="stylesheet" href="product.css">
-
+	<link rel="stylesheet" href="index.css">
+	
 </head>
+<style> 
 
+.rating.rating-1:after { width: 44%; }
+</style>
 <body >
 	<div class="page-main" role="main">
     <aside>
     		<div class="bar_title">
     			<img class="mark" src="mushrooms.png">
-    			 Murshroom Hunter
+    			 Mushroom Hunter
     		</div>
         <ul>
         	<li>
@@ -60,19 +64,23 @@
 <div class="product_all">
 	<div class= "go_back">
 		<img src = "back_icon.png">
-		<span>回上一頁</span>
+		
 	</div>
+
 	<div class="product_area"> 
+	<a href="#"><img class = "product_arrow_left" src ="right_arrow.png"></a>
+	
 	<div class = "product_img">
 		<img class="product_img"  src = "阿囉哈~海洋風情菇.png">
+
 	</div>
 	<div id="container">
 		<!--Pestaña 1 activa por defecto-->
 	    <input id="tab-1" type="radio" name="tab-group" checked="checked"/>
-	    <label for="tab-1">蘑菇</label>
+	    <label class="mu_label" for="tab-1">蘑菇</label>
 	    <!--Pestaña 2 inactiva por defecto-->
 	    <input id="tab-2" type="radio" name="tab-group"/>
-	    <label for="tab-2">推薦料理</label>
+	    <label class ="cu_label" for="tab-2">推薦料理</label>
 	    <!--Pestaña 3 inactiva por defecto-->
 	    <input id="tab-3" type="radio" name="tab-group"/>
 	    <label for="tab-3">顧客回饋</label>
@@ -80,23 +88,96 @@
 	    <div id="content">
 	    	<!--Contenido de la Pestaña 1-->
 	        <div id="content-1">
-	            <p>品種: 阿囉哈~海洋風情菇</p>
-	            <p>原產地: 南方熱帶夏威夷島</p>
-	            <p>特性: 長相如同夏威夷的椰子樹，葉大根粗 讓人心曠神怡、活潑開朗，大喊「阿囉哈!!」</p>
-	            <p>養殖法: 從大王椰子樹掉下的葉片，落地之後長成</p>
-	            <p>數量: 40</p>
-	            <p>金額: 399$</p>
-	            <p>功效:開開心心</p>
+	        <p class="product_name">阿囉哈~海洋風情菇
+	        </p>
+	        <span class="star-rating c">
+  <span  class="rating rating-1">
+    <img src="https://s.cdpn.io/2437/mushroom.png" alt="Mushroom!" />
+  </span>
+  
+</span>
+	        <table class="product_table" border="0">
+	           
+	            <tr><td class="product_in">原產地:</td><td> 南方熱帶夏威夷島</td></tr>
+	            <tr><td>特性:</td> <td>長相如同夏威夷的椰子樹，葉大根粗 讓人心曠神怡、活潑開朗，大喊「阿囉哈!!」</td></tr>
+	            <tr><td>養殖法:</td><td> 從大王椰子樹掉下的葉片，落地之後長成</td></tr>
+	            <tr><td>數量:</td><td> 40</td></tr>
+	            <tr><td>金額:</td> <td>399$</td></tr>
+	            <tr><td>功效:</td><td>開開心心</td></tr>
+	            </table>
 	        </div>
 	        <!--Contenido de la Pestaña 2-->
 	        <div id="content-2">
+	        	
+	            <p class="product_name">香菇山藥鮮雞湯</p><br>
+	            
+	            <table class="reciept_table" >
+	            <tr><td>食材<span class="reciept_detail"></span></td><td>2人份/60分鐘</td></tr>
+	            <tr><td rowspan="2">1.雞腿肉 500g </td><td>2.山藥</td></tr>
+	            <tr></tr>
+	            <tr><td colspan="2">步驟</td></tr>
+	            <tr><td colspan="2">切食材>>蒸煮雞湯>>悶軟枸杞>>加入鹽巴</td></tr>
+	            </table>
+	            <button class="button" style="vertical-align:middle"><a href="https://icook.tw/recipes/288672"><span>前往詳細步驟</span></a></button>
 	            
 	        </div>
 	        <!--Contenido de la Pestaña 3-->
 	        <div id="content-3">
-	        	
+	        	<span class="message">
+	        		<p>留言者:</p>
+	        		<p>您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+
+demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+
+既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：</p>
+	        	</span>
 	        </div>
 	    </div>
+	</div>
+	<a  href="#"><img class = "product_arrow_right" src ="right_arrow.png"></a>
+	<div class="control">
+	<a  href="#"><img class = "receipt_arrow_left" src ="right_arrow.png"></a>
+	<a  href="#"><img class = "receipt_arrow_right" src ="right_arrow.png"></a>
 	</div>
 	</div>
 
