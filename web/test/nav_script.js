@@ -14,7 +14,7 @@ $(function(){
                 $('.qq').removeClass('qq');
                 $asidButton.find('img').attr('src', 'close.png');
             }else{
-                $aside.stop(true).animate({left: '-400px'}, duration, 'easeInBack');
+                $aside.stop(true).animate({left: '-450px'}, duration, 'easeInBack');
                 $('.img_bg').removeClass('img_hide');
                 $('.opened').toggleClass('qq');
                 $('.opened').removeClass('opened');               
