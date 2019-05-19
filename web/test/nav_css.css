@@ -68,46 +68,27 @@ aside img{
     0% {
       -webkit-transform: rotate(0deg) ;
     }
-    10%{
+    20%{
     	-webkit-transform: rotate(36deg) ;
       
     }
-    20% {
+    40% {
       -webkit-transform: rotate(54deg) ;
       
     }
-    30% {
+    60% {
       -webkit-transform: rotate(108deg);
       
     }
-    40% {
+    80% {
       -webkit-transform: rotate(144deg);
       
     }
-    50% {
+    100% {
       -webkit-transform: rotate(180deg);
       
     }
-    60% {
-      -webkit-transform: rotate(216deg) ;
-      
-    }
-    70% {
-      -webkit-transform: rotate(254deg) ;
-      
-    }
-    80% {
-      -webkit-transform: rotate(288deg) ;
-      
-    }
-    90% {
-      -webkit-transform: rotate(324deg) ;
-      
-    }
-    100% {
-      -webkit-transform: rotate(360deg) ;
-      
-    }
+    
   }
 
   @-moz-keyframes pic {
@@ -141,21 +122,7 @@ aside img{
   }
 
 .qq:hover img{
-	 animation-name: pic;  /*动画名字是pic，与上面定义的名字一样*/
-      -webkit-animation-name: pic;
-      -moz-animation-name: pic;
-      -ms-animation-name: pic;
-      -o-animation-name: pic;
-      animation-duration: 0.75s;  /*动画用时1s*/
-      -webkit-animation-duration: 0.75s;
-      -moz-animation-duration: 0.75s;
-      -ms-animation-duration: 0.75s;
-      -o-animation-duration: 0.75s;
-      animation-timing-function: linear;  /*匀速动画*/
-      -webkit-animation-timing-function: linear;
-      -moz-animation-timing-function: linear;
-      -ms-animation-timing-function: linear;
-      -o-animation-timing-function: linear;
+	 
 }
 .opened:hover img{
 	 animation-name: pic;  /*动画名字是pic，与上面定义的名字一样*/
@@ -275,4 +242,255 @@ aside .person{
 	margin-bottom: 3%;
 	height: 100%;
 	z-index: 1;
+}
+
+
+.btn {
+  display: inline-block;
+  min-width: 140px;
+  padding: 0 20px;
+  border-radius: 5px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  outline: 0;
+  border: 0;
+}
+.btn_rounded {
+  border: 1px solid #C3C3C3;
+  color: #C3C3C3;
+  transition: all 0.3s ease-in-out;
+}
+.btn_red {
+  background-color: #f78c7b;
+  line-height: 33px;
+}
+.label_name,
+.label_mail,
+.label_pass {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.label_name:before,
+.label_mail:before,
+.label_pass:before {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.label_name:before {
+  content: "\f007";
+}
+.label_mail:before {
+  content: "\f0e0";
+}
+.label_pass:before {
+  content: "\f023";
+}
+.forgotPass {
+  text-decoration: none;
+  color: #C3C3C3;
+}
+.login_wrap {
+  display: none; 
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  width: 830px;
+  height: 350px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #c1c4d6;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.login_wrap_up{
+	display: block !important;
+}
+.login_action_wrap {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+  height: 430px;
+  width: 430px;
+  background-color: #f7f7f6;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 3px rgba(39, 37, 37, 0.45);
+}
+.question_singUp,
+.question_login {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 270px;
+}
+.question_singUp .title,
+.question_login .title {
+  margin: 0;
+  line-height: 32px;
+  font-size: 28px;
+}
+.question_singUp p,
+.question_login p {
+  padding: 15px 0 20px 0;
+  font-size: 14px;
+}
+.question_singUp {
+  left: 50px;
+}
+.question_login {
+  right: 50px;
+}
+.action_singUp,
+.action_login {
+  position: absolute;
+  top: 30px;
+  width: 330px;
+  z-index: 3;
+}
+.action_singUp .btn,
+.action_login .btn {
+  float: right;
+}
+.action_singUp .title,
+.action_login .title {
+  color: #f78c7b;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.action_singUp .input,
+.action_login .input {
+  width: 100%;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 2px solid #c1c4d6;
+  background-color: transparent;
+  line-height: 32px;
+  font-size: 13px;
+}
+.action_singUp .input:hover,
+.action_login .input:hover,
+.action_singUp .input:focus,
+.action_login .input:focus,
+.action_singUp .input:active,
+.action_login .input:active {
+  outline: 0;
+}
+.action_singUp .input_block,
+.action_login .input_block {
+  margin: 35px 0;
+}
+.action_singUp {
+  left: 100px;
+}
+.action_login {
+  right: 100px;
+}
+.input_wrap {
+  position: relative;
+}
+.loginActive .login_action_wrap {
+  -webkit-animation: 0.6s loginActive forwards;
+          animation: 0.6s loginActive forwards;
+}
+.loginActive .action_singUp,
+.loginActive .question_login {
+  visibility: hidden;
+}
+.singUpActive .login_action_wrap {
+  -webkit-animation: 0.6s singUpActive forwards;
+          animation: 0.6s singUpActive forwards;
+}
+.singUpActive .action_login,
+.singUpActive .question_singUp {
+  visibility: hidden;
+}
+.input + label:after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f78c7b;
+  transition: width 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.input:focus + label:after {
+  width: 100%;
+}
+.input:focus + label:before {
+  color: #f78c7b;
+}
+@-webkit-keyframes loginActive {
+  40% {
+    -webkit-transform: translateX(320px);
+            transform: translateX(320px);
+  }
+  65% {
+    -webkit-transform: translateX(280px);
+            transform: translateX(280px);
+  }
+  100% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+@keyframes loginActive {
+  40% {
+    -webkit-transform: translateX(320px);
+            transform: translateX(320px);
+  }
+  65% {
+    -webkit-transform: translateX(280px);
+            transform: translateX(280px);
+  }
+  100% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+}
+@-webkit-keyframes singUpActive {
+  0% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  40% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  65% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@keyframes singUpActive {
+  0% {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  40% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  65% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
 }

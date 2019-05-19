@@ -23,3 +23,28 @@ $(function(){
         });
 
 });
+$(".open_log").click(function(){
+		$(".login_wrap").toggleClass("login_wrap_up");
+		              
+    })
+
+
+
+   $('body').click(function(e) {
+	var target = $(e.target);
+   if(!target.is('.login_wrap *') && !target.is('.open_log*'))
+      
+         $(".login_wrap").removeClass("login_wrap_up");
+     
+      
+});
+
+$('#signUpBtn').click(function() {
+    $('#main').toggleClass('singUpActive');
+    $('#main').removeClass('loginActive');
+});
+
+$("#loginBtn").click(function() {
+    $('#main').toggleClass('loginActive');
+    $('#main').removeClass('singUpActive');
+});

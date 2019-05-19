@@ -24,7 +24,7 @@
         			<img src="10544146.jpg">
         			<span class="member_name">嗨又諄</span>
         			<br>
-        			<span class="member">會員中心</span>
+        			<span class="member ">會員中心</span>
         			<span class="logout">登出</span>
         		</div>
         	</li>
@@ -32,7 +32,7 @@
             <li>
             <div class="menu_content">
             	<div class="icon_space">
-            		<img class="icon" src="mushrooms.png"><a href="#">購物車</a> 
+            		<img class="icon " src="mushrooms.png"><a class="open_log" href="#">購物車</a> 
             	</div>
            	 	<div class="icon_space">
             		<img class="mark" src="mushrooms.png"><a href="#">我的最愛</a> 
@@ -55,14 +55,82 @@
         <button class="qq"><img class="close_img" src="menu.png"></button>
     </aside>
 </div>
-<div class = "second_back">
-放個
-</div>
 <script src="jquery-3.2.1.min.js"></script>
 
 
 <script src="jquery-ui.min.js"></script>
 
 <script src="nav_script.js"></script>
+<div id="main" class="login_wrap singUpActive">
+        <div class="login_question_wrap">
+            <div class="question_singUp ">
+                <h2 class="title">Don't have an account?</h2>
+                <p>Lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                </p>
+                <a href="javascript:void(0)" id="signUpBtn" class="btn btn_rounded">Sing up</a>
+            </div>
+            <div class="question_login ">
+                <h2 class="title">Have an account?</h2>
+                <p>Lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                    lorem ipsum dolor sit ames
+                </p>
+                <a href="javascript:void(0)" id="loginBtn" class="btn btn_rounded">Log in</a>
+            </div>
+            <div class="action_singUp">
+                <form action="#">
+                    <fieldset>
+                        <legend class="title">Sing Up</legend>
+                        <div class="input_block">
+                            <div class="input_wrap">
+                                <input type="text" id="sing_name" class="input" placeholder="Full Name">
+                                <label for="sing_name" class="label_name"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <input type="text" id="sing_email" class="input" placeholder="Email">
+                                <label for="sing_email" class="label_mail"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <input type="text" id="sing_pass" class="input" placeholder="Password">
+                                <label for="sing_pass" class="label_pass"></label>
+                            </div>
+                        </div>
+                        <input type="submit" value="Sing Up" class="btn btn_red">
+                    </fieldset>
+                </form>
+            </div>
+            <div class="action_login">
+                <form action="#">
+                    <fieldset>
+                        <legend class="title">Log in</legend>
+                        <div class="input_block">
+                            <div class="input_wrap">
+                                <input type="text" id="mail" class="input" placeholder="Email">
+                                <label for="sing_pass" class="label_mail"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <input type="text" id="pass" class="input" placeholder="Password">
+                                <label for="sing_pass" class="label_pass"></label>
+                            </div>
+                        </div>
+                        <a href="#" class="forgotPass">Forgot password?</a>
+                        <input type="submit" value="Login" class="btn btn_red">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="login_action_wrap ">
+        </div>
+    </div>
+
+
+  
+
+    <script  src="js/index.js"></script>
+    
 </body>
 </html>
