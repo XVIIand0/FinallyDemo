@@ -102,6 +102,11 @@ body {
 .page_number{
 	font-size:84px;
 	vertical-align:middle;
+	width:8%;
+	border-radius: 10px;
+}
+.active{
+	background-color:#00BBFF;
 }
 .page{
 	text-align:center;
