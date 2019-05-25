@@ -1,3 +1,4 @@
+
 html {
     font-size: 20px;
     line-height: 1.5;
@@ -28,6 +29,7 @@ aside img{
     color:#fff;
     text-decoration: none;
 }
+
 .page-main ul li a:hover{
     color:#8595ff;
     text-decoration: none;
@@ -39,6 +41,7 @@ aside img{
     top: 0;
     left: -450px;
     position: fixed;
+    color:white;
 }
 
 .page-main > aside ul {
@@ -211,7 +214,7 @@ width:200px;
     position: absolute;
       color:white;
 }
-.mark{
+.mark_nv{
 	width: 36px;
     height: 36px;
     padding-right:10px;
@@ -310,7 +313,7 @@ width:200px;
   content: "\f0e0";
 }
 .label_pass:before {
-  content: "\f023";
+	content: "\f06e";
 }
 .forgotPass {
   text-decoration: none;
@@ -545,7 +548,7 @@ width:200px;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
 }
-.btn-default {
+.btn-default_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(108, 88, 179, 0.75);
@@ -557,13 +560,13 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-default:hover {
+.btn-default_b:hover {
   color: #FFF;
   background: rgba(108, 88, 179, 0.75);
   border: 2px solid rgba(108, 89, 179, 0.75);
 }
 
-.btn-primary {
+.btn-primary_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(58, 133, 191, 0.75);
@@ -575,13 +578,13 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-primary:hover {
+.btn-primary_b:hover {
   color: #FFF;
   background: rgba(58, 133, 191, 0.75);
   border: 2px solid rgba(58, 133, 191, 0.75);
 }
 
-.btn-success {
+.btn-success_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(103, 192, 103, 0.75);
@@ -593,13 +596,13 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-success:hover {
+.btn-success_b:hover {
   color: #FFF;
   background: rgb(103, 192, 103, 0.75);
   border: 2px solid rgb(103, 192, 103, 0.75);
 }
 
-.btn-info {
+.btn-info_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(91, 192, 222, 0.75);
@@ -611,13 +614,13 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-info:hover {
+.btn-info_b:hover {
   color: #FFF;
   background: rgba(91, 192, 222, 0.75);
   border: 2px solid rgba(91, 192, 222, 0.75);
 }
 
-.btn-warning {
+.btn-warning_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(240, 173, 78, 0.75);
@@ -629,13 +632,13 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-warning:hover {
+.btn-warning_b:hover {
   color: #FFF;
   background: rgb(240, 173, 78, 0.75);
   border: 2px solid rgba(240, 173, 78, 0.75);
 }
 
-.btn-danger {
+.btn-danger_b {
   font-family: Raleway-SemiBold;
   font-size: 13px;
   color: rgba(217, 83, 78, 0.75);
@@ -647,13 +650,21 @@ width:200px;
   transition: all 0.3s ease 0s;
 }
 
-.btn-danger:hover {
+.btn-danger_b:hover {
   color: #FFF;
   background: rgba(217, 83, 78, 0.75);
   border: 2px solid rgba(217, 83, 78, 0.75);
 }
-.btn{
+.btn_b{
 	font-size:20px;
 	padding:1.2%;
 	font-family: Microsoft JhengHei;
+}
+.about_us{
+	display: block;	
+	color: white;
+	text-align: center;
+}
+.change_co :hover{
+	filter: invert(63%) sepia(69%) saturate(3627%) hue-rotate(206deg) brightness(106%) contrast(101%);
 }

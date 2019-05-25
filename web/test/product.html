@@ -5,8 +5,8 @@
 	<title>商品頁面</title>
 	<link rel="stylesheet" href="nav_css.css">
 	<link rel="stylesheet" href="product.css">
-	<link rel="stylesheet" href="index.css">
-	
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <style> 
 
@@ -16,7 +16,7 @@
 	<div class="page-main" role="main">
     <aside>
     		<div class="bar_title">
-    			<img class="mark" src="mushrooms.png">
+    			<img class="mark_nv" src="mushrooms.png">
     			 Mushroom Hunter
     		</div>
         <ul>
@@ -29,8 +29,8 @@
         			<span class="member_name">HI又諄</span>
         			<br>
         			<span class="m_control">
-        			<span class="member ">會員中心</span>
-        			<span class="logout ">登出</span>
+        			<span class="member "><a href="#">會員中心</a></span>
+        			<span class="logout "><a href="#">登出</a></span>
         			</span>
         		</div>
         	</li>
@@ -43,28 +43,28 @@
                 </div>
                 </li>
                 <li> 
-                <button type="button" class="btn btn-default">魔力</button>
+                <button type="button" class="btn_b btn-default_b">魔力</button>
 
     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 
     <!-- Indicates a successful or positive action -->
-    <button type="button" class="btn btn-success">養生</button>
+    <button type="button" class="btn_b btn-success_b">養生</button>
 
     <!-- Contextual button for informational alert messages -->
-    <button type="button" class="btn btn-info">務實</button>
+    <button type="button" class="btn_b btn-info_b">務實</button>
 
     <!-- Indicates caution should be taken with this action -->
-    <button type="button" class="btn btn-warning">超能力</button>
+    <button type="button" class="btn_b btn-warning_b">超能力</button>
 
     <!-- Indicates a dangerous or potentially negative action -->
-    <button type="button" class="btn btn-danger">邪惡</button></li>
+    <button type="button" class="btn_b btn-danger_b">邪惡</button></li>
             <li>
             <div class="menu_content">
             	<div class="icon_space">
             		<img class="icon" src="mushrooms.png"><a class="open_log" href="#">購物車</a> 
             	</div>
            	 	<div class="icon_space">
-            		<img class="mark" src="mushrooms.png"><a href="#">我的最愛</a> 
+            		<img class="icon" src="mushrooms.png"><a href="#">我的最愛</a> 
            		</div>
            		 </div>
             </li>
@@ -74,12 +74,38 @@
             		<img class="icon" src="mushrooms.png"><a href="#">商品總覽</a> 
             	</div>
             	<div class="icon_space">
-            		<img class="mark" src="mushrooms.png"><a href="#">推薦菜譜</a> 
+            		<img class="icon" src="mushrooms.png"><a href="#">推薦菜譜</a> 
             	</div>
             	</div>
             	</li>
             	
+            	
+            	<li style="margin-top:40% !important;" class="about_us">about us</li>
+            	<li>
+            	<div class="row">
+            	<div class="col-sm-4 change_co">
+            	<a href="#">
+            		<img class="about_p" width="100%" src="file.png">
+            		<br>
+            		<span class="about_us">
+            		購物流程</span></a>
+            	</div> 
+            	<div class="col-sm-4 change_co">
+            		<a href="#"> 
+            		<img class="about_p" width="100%" src="speech-bubble.png">
+            		<br>
+            		<span class="about_us">
+            		聯絡我們</span></a>
+            	</div>
+            	<div class="col-sm-4 change_co"> 
+            	<a href="#">
+            		<img class="about_p" width="100%" src="file.png">
+            		<br>
+            		<span class="about_us">最新消息</span></a>
+            	</div>
+            	</div>
             	</li>
+            	<li class="about_us">2019 Mushroom Hunter<br>Allright Reserved</li>
 
         </ul>
         <button class="qq"><img class="close_img" src="menu.png"></button>
@@ -87,137 +113,277 @@
     </div>
 <div class="img_bg" >
 <div class = "second_back">
-<div class="product_all">
-	<div class= "go_back">
-		<img src = "back_icon.png">
-		
-	</div>
+<div class="tab-container">
+        <div class="row">
+        <div class="col-sm-2">
+        <a href="#">
+        <img class=" arrow_B left_B_arrow" width="60%" src="right_arrow.png">
+        </a>
+        </div>
+            <div class="col-sm-8">
+                <div class="tab-menu">
+                    <ul>
+                        <li><a href="#" class="tab-a active-a" data-id="tab1">商品資訊</a></li>
+                        <li><a href="#" class="tab-a" data-id="tab2">推薦食譜</a></li>
+                        <li><a href="#" class="tab-a" data-id="tab3">饕客回饋</a></li>
+                    </ul>
+                </div>
+                <!--end of tab-menu-->
+                <div class="row">
+                    <div class="col-xs-8 col-sm-5"  >
+                        <img class="tab tab-active" data-id="tab1" style="padding: 5%" width="100%" src="阿囉哈~海洋風情菇.png">
+                        <img class="tab" data-id="tab3" style="padding: 5%" width="100%" src="阿囉哈~海洋風情菇.png">
+                        <img class="tab" data-id="tab2" style="padding: 5%" width="100%" src="商品照片_背景.png">
+                        <br>
+                        <div class="col-sm-12 tab"  data-id="tab2">
+                        <a href="#">
+                        <img class="arrow_S col-sm-2 left_S_arrow "   width="20%" src="right_arrow.png">
+                        </a>
+                        <a href="#">
+                        <img class="arrow_S right_arrow col-sm-2 "  width="20%" src="right_arrow.png">
+                        </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-7 tab_right">
 
-	<div class="product_area"> 
-	<a href="#"><img class = "product_arrow_left" src ="right_arrow.png"></a>
-	
-	<div class = "product_img">
-		<img class="product_img"  src = "阿囉哈~海洋風情菇.png">
+                        <div class="tab tab-active" data-id="tab1">
+                            <h2>菇菇菇菇菇菇姑姑</h2>
+                            <h5>星星放置區</h5>
+                            <br>
+                            <h5><b>原產地:</b>南方熱帶夏威夷島</h5>
+                            <h5><b>養殖法:</b> 從大王椰子樹掉下的葉片，落地之後長成</h5>
+                            <h5><b>特性: </b>長相如同夏威夷的椰子樹，葉大根粗 讓人心曠神怡、活潑開朗，大喊「阿囉哈!!」</h5>
+                            <h5><b>功效:</b> 開開心心</h5>
+                            <h5><b>數量:</b> 40</h5>
+                            <h5><b>售價(包):</b> 40</h5>
+                            <h5><b>銷售數量:</b> 40</h5>
+                            <br>
+                            <button type="button" class="btn btn-outline-success">加入購物車 🍄</button>
+                            <button type="button" class="btn btn-outline-info">加入收藏 💚</button>
+                        </div>
+                        <!--end of tab one-->
 
-	</div>
-	<div id="container">
-		<!--Pestaña 1 activa por defecto-->
-	    <input id="tab-1" type="radio" name="tab-group" checked="checked"/>
-	    <label class="mu_label" for="tab-1">蘑菇</label>
-	    <!--Pestaña 2 inactiva por defecto-->
-	    <input id="tab-2" type="radio" name="tab-group"/>
-	    <label class ="cu_label" for="tab-2">推薦料理</label>
-	    <!--Pestaña 3 inactiva por defecto-->
-	    <input id="tab-3" type="radio" name="tab-group"/>
-	    <label for="tab-3">顧客回饋</label>
-	    <!--Contenido a mostrar/ocultar-->
-	    <div id="content">
-	    	<!--Contenido de la Pestaña 1-->
-	        <div id="content-1">
-	        <p class="product_name">阿囉哈~海洋風情菇
-	        </p>
-	        <span class="star-rating c">
-  <span  class="rating rating-1">
-    <img src="https://s.cdpn.io/2437/mushroom.png" alt="Mushroom!" />
-  </span>
-  
-</span>
-	        <table class="product_table" border="0">
-	           
-	            <tr><td class="product_in">原產地:</td><td> 南方熱帶夏威夷島</td></tr>
-	            <tr><td>特性:</td> <td>長相如同夏威夷的椰子樹，葉大根粗 讓人心曠神怡、活潑開朗，大喊「阿囉哈!!」</td></tr>
-	            <tr><td>養殖法:</td><td> 從大王椰子樹掉下的葉片，落地之後長成</td></tr>
-	            <tr><td>數量:</td><td> 40</td></tr>
-	            <tr><td>金額:</td> <td>399$</td></tr>
-	            <tr><td>功效:</td><td>開開心心</td></tr>
-	            </table>
-	        </div>
-	        <!--Contenido de la Pestaña 2-->
-	        <div id="content-2">
-	        	
-	            <p class="product_name">香菇山藥鮮雞湯</p><br>
-	            
-	            <table class="reciept_table" >
-	            <tr><td>食材<span class="reciept_detail"></span></td><td>2人份/60分鐘</td></tr>
-	            <tr><td rowspan="2">1.雞腿肉 500g </td><td>2.山藥</td></tr>
-	            <tr></tr>
-	            <tr><td colspan="2">步驟</td></tr>
-	            <tr><td colspan="2">切食材>>蒸煮雞湯>>悶軟枸杞>>加入鹽巴</td></tr>
-	            </table>
-	            <button class="button" style="vertical-align:middle"><a href="https://icook.tw/recipes/288672"><span>前往詳細步驟</span></a></button>
-	            
-	        </div>
-	        <!--Contenido de la Pestaña 3-->
-	        <div id="content-3">
-	        	<span class="message">
-	        		<p>留言者:</p>
-	        		<p>您可以狠狠地点击这里：水平翻转图片重用demo
+                        <div class="tab receipt" data-id="tab2">
+                            <h2>精氣神養身菇姑姑菇雞湯</h2>
+                            <div id="scroll-me-all-night-long">
 
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+                                <table>
+                                    <tr>
+                                        <td>份量:<br>四人份</td>
+                                        <td>所需時間:<br>60分鐘</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">所需食材</td>
+                                    </tr>
+                                    <tr>
+                                        <td>乾香菇(中小形）10朵</td>
+                                        <td>雞腿肉 二大塊</td>
+                                    </tr>
+                                    <tr>
+                                        <td>青蔥(支）2</td>
+                                        <td>冷開水 700cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>醬油 10cc</td>
+                                        <td>白胡椒粉 適量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香菇水 500cc</td>
+                                        <td>白飯 1.5米杯</td>
+                                    </tr>
+                                    <tr>
+                                        <td>雞粉或塩 適量</td>
+                                        <td></td>
+                                    </tr>
+                                               <tr>
+                                        <td>青蔥(支）2</td>
+                                        <td>冷開水 700cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>醬油 10cc</td>
+                                        <td>白胡椒粉 適量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香菇水 500cc</td>
+                                        <td>白飯 1.5米杯</td>
+                                    </tr>
+                                    <tr>
+                                        <td>雞粉或塩 適量</td>
+                                        <td></td>
+                                    </tr>           <tr>
+                                        <td>青蔥(支）2</td>
+                                        <td>冷開水 700cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>醬油 10cc</td>
+                                        <td>白胡椒粉 適量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香菇水 500cc</td>
+                                        <td>白飯 1.5米杯</td>
+                                    </tr>
+                                    <tr>
+                                        <td>雞粉或塩 適量</td>
+                                        <td></td>
+                                    </tr>           <tr>
+                                        <td>青蔥(支）2</td>
+                                        <td>冷開水 700cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>醬油 10cc</td>
+                                        <td>白胡椒粉 適量</td>
+                                    </tr>
+                                    <tr>
+                                        <td>香菇水 500cc</td>
+                                        <td>白飯 1.5米杯</td>
+                                    </tr>
+                                    <tr>
+                                        <td>雞粉或塩 適量</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <br>
+                                 <button type="button" class="btn btn-outline-info" style="width: 100%">查看更詳細的作法</button>
+                            </div>
+                        </div>
+                        <!--end of tab two-->
+                        <div class="tab " data-id="tab3">
+                            <div id="scroll-me-all-night-long2">
+                                <div>
 
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h6> 帳號:yenniscute</h6>
+                                                <h6>留言內容: 非常好吃，下次會再回購</h6>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        評分:🍄🍄🍄🍄🍄
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        購買數量:2(包)
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        2019/06/01 15:32
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!---->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h6> 帳號:yenniscute</h6>
+                                                <h6>留言內容: 非常好吃，下次會再回購</h6>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        評分:🍄🍄🍄🍄🍄
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        購買數量:2(包)
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        2019/06/01 15:32
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h6> 帳號:yenniscute</h6>
+                                                <h6>留言內容: 非常好吃，下次會再回購</h6>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        評分:🍄🍄🍄🍄🍄
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        購買數量:2(包)
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        2019/06/01 15:32
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h6> 帳號:yenniscute</h6>
+                                                <h6>留言內容: 非常好吃，下次會再回購</h6>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        評分:🍄🍄🍄🍄🍄
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        購買數量:2(包)
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        2019/06/01 15:32
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h6> 帳號:yenniscute</h6>
+                                                <h6>留言內容: 非常好吃，下次會再回購</h6>
+                                                <div class="row">
+                                                    <div class="col-sm">
+                                                        評分:🍄🍄🍄🍄🍄
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        購買數量:2(包)
+                                                    </div>
+                                                    <div class="col-sm">
+                                                        2019/06/01 15:32
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
 
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
 
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
+                                </div>
 
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
+                            </div>
+                        </div>
+                        <!--end of tab three-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            <a href="#">
+        <img class="arrow_B  right_arrow" width="60%" src="right_arrow.png">
+        </a>
+        </div>
+        </div>
 
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
 
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
 
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
 
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：您可以狠狠地点击这里：水平翻转图片重用demo
-
-demo页面中有个不对称的投影图片，分别用在张含韵小姐图片下，以及某段内容标题下，以达到某种卷边效果。我们会发现，这两处的投影图片是不一样的，一个是右下方的投影，还有一个是左下方的投影。如果你遇到这样的设计你怎么办，是分别切出共2张图吗？
-
-既然本文是将翻转的，显然，这里显然不是两张不同的投影图片了，而是同一张，只是其中某一个水平翻转了，如下截图标示：</p>
-	        	</span>
-	        </div>
-	    </div>
-	</div>
-	<a  href="#"><img class = "product_arrow_right" src ="right_arrow.png"></a>
-	<div class="control">
-	<a  href="#"><img class = "receipt_arrow_left" src ="right_arrow.png"></a>
-	<a  href="#"><img class = "receipt_arrow_right" src ="right_arrow.png"></a>
-	</div>
-	</div>
-
-</div>
-
-</div>
+    </div>
 
 <script src="jquery-3.2.1.min.js"></script>
 
-
-<script src="jquery-ui.min.js"></script>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
 
+
+
+
+
+</div>
 </div>
 
     <div id="main" class="login_wrap singUpActive">
@@ -242,15 +408,15 @@ demo页面中有个不对称的投影图片，分别用在张含韵小姐图片�
                         <div class="input_block">
                             <div class="input_wrap">
                                 <input type="text" id="sing_account" class="input" placeholder="帳號">
-                                <label for="sing_account" class="label_name"></label>
+                                <label for="sing_account" class="label_name fa fa-user"></label>
                             </div>                            
                             <div class="input_wrap">
-                                <input type="password" id="sing_pass" class="input" placeholder="密碼">
-                                <label for="sing_pass" class="label_pass"></label>
+                                <input type="password" class="input sing_pass" placeholder="密碼">
+                                <label for="sing_pass" class="label_pass far fa-eye-slash"></label>
                             </div>
                             <div class="input_wrap">
                                 <input type="text" id="sing_email" class="input" placeholder="信箱">
-                                <label for="sing_email" class="label_mail"></label>
+                                <label for="sing_email" class="label_mail fas fa-envelope"></label>
                             </div>
                         </div>
                         <input type="submit" value="註冊" class="btn_l btn_red">
@@ -264,11 +430,11 @@ demo页面中有个不对称的投影图片，分别用在张含韵小姐图片�
                         <div class="input_block">
                             <div class="input_wrap">
                                 <input type="text" id="sing_account" class="input" placeholder="帳號">
-                                <label for="sing_pass" class="label_mail"></label>
+                                <label for="sing_pass" class="label_mail fa fa-user"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="text" id="pass" class="input" placeholder="密碼">
-                                <label for="sing_pass" class="label_pass"></label>
+                                <input type="password"  class="input sing_pass" placeholder="密碼">
+                                <label for="sing_pass" class="label_pass far fa-eye-slash"></label>
                             </div>
                         </div>
                         <a href="#" class="forgotPass">忘記密碼了嗎??</a>
@@ -281,5 +447,8 @@ demo页面中有个不对称的投影图片，分别用在张含韵小姐图片�
         </div>
     </div>
 <script src="nav_script.js"></script>
+<script src="js/index.js"></script>
+<script src="jquery-ui.min.js"></script>
+
 </body>
 </html>

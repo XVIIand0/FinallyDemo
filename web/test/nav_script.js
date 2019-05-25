@@ -53,11 +53,15 @@ $(".label_pass").mousedown(function(e){ //点击鼠标就算不松开也会触�
      $(this).mousemove(function(e){  //在此作用域中不断移动获取XY坐标
          document.title=e.pageX+'---'+e.pageY
      });
-     $("#sing_pass").attr("type","text");
+     $(".sing_pass").attr("type","text");
+     $(".label_pass").removeClass('fa-eye-slash');
+      $(".label_pass").addClass('fa-eye');
 
  });
 $(".label_pass").mouseup(function(){  //松开鼠标左键触发事件
      $(this).unbind('mousemove');
-     $("#sing_pass").attr("type","password");
+     $(".sing_pass").attr("type","password");
+     $(".label_pass").addClass('fa-eye-slash');
+      $(".label_pass").removeClass('fa-eye');
        //解绑之前的mousemove事件
  });
