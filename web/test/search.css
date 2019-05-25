@@ -1,6 +1,6 @@
 
 .snip1392 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: Microsoft JhengHei;
   position: relative;
   float: left;
   overflow: hidden;
@@ -105,6 +105,7 @@ body {
 	width:8%;
 	border-radius: 10px;
 }
+
 .active{
 	background-color:#00BBFF;
 }
