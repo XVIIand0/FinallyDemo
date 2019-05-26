@@ -7,6 +7,7 @@
   margin: 10px 1px;
   min-width: 230px;
   max-width: 245px;
+  height:200px;
   width: 100%;
   color: #ffffff;
   text-align: left;
@@ -27,11 +28,15 @@
 }
 .snip1392 .image {
   padding: 15px 0;
+  min-height:200px;
+  max-width: 245px;
+  text-align:center;
 }
 .snip1392 img {
-  max-width: 100%;
+  max-width: 245px;
+  max-height: 200px;
+  vertical-align:middle;
   backface-visibility: hidden;
-  vertical-align: top;
   position: relative;
   opacity: 0.7;
 }
@@ -98,11 +103,12 @@ body {
 }
 .name{
 	text-align:center;
+	vertical-align:bottom;
 }
 .page_number{
-	font-size:84px;
+	font-size:40px;
 	vertical-align:middle;
-	width:8%;
+	width:6%;
 	border-radius: 10px;
 }
 
@@ -114,6 +120,7 @@ body {
 	display:inline-block;
 }
 .left_S_arrow{
+	margin-top:3%;
 	-moz-transform:scaleX(-1);
     -webkit-transform:scaleX(-1);
     -o-transform:scaleX(-1);
