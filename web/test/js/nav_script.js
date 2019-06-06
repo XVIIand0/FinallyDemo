@@ -12,13 +12,13 @@ $(function(){
                 $('.img_bg').toggleClass('img_hide');
                 $('.qq').toggleClass('opened');
                 $('.qq').removeClass('qq');
-                $asidButton.find('img').attr('src', 'close.png');
+                $asidButton.find('img').attr('src', 'img/close.png');
             }else{
                 $aside.stop(true).animate({left: '-450px'}, duration, 'easeInBack');
                 $('.img_bg').removeClass('img_hide');
                 $('.opened').toggleClass('qq');
                 $('.opened').removeClass('opened');               
-                $asidButton.find('img').attr('src', 'menu.png');
+                $asidButton.find('img').attr('src', 'img/menu.png');
             };
         });
 
