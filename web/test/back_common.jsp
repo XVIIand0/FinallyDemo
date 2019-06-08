@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--基本元素複製區塊標頭-->
+<html>
+
+<head>
+    <title>期末專案</title>
+    <meta charset="utf-8">
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="css/back_index.css">
+ 
+    <link rel="stylesheet" type="text/css" href="css/back.css">
+</head>
+
+<body>
+    <div id="middle_back_7">
+        <br>
+
+        <!--後端葉面-->
+        <div class="topic"><b>-後端介面-</b></div>
+
+        <div id="back_t">
+            <div class="back_left">
+                <div> &nbsp;</div>
+                   <a href="back_member.jsp" style="color:#444444"><div class="about_lable"> 會員管理</div></a>
+                <a href="back_product.jsp" style="color: #444444"><div class="about_lable">商品管理</div></a>
+                <a href="back_order.jsp" style="color: #444444"><div class="about_lable"> 訂單管理</div></a>
+                <a href="back_common.jsp" style="color: black"><div class="about_lable_main"> 訪客回饋</div></a>
+
+            </div>
+
+
+            <div class="back_right">
+                <div class="inner_back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>訪客性別</td>
+                                <td>意見分類</td>
+                                <td>意見內容</td>
+                                <td>訪客電話</td>
+                                <td>訪客信箱</td>
+                                <td>已處理</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+多剛厚衣差不厚衣差不厚衣差不好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+                            <tr>
+                                <td>女</td>
+                                <td>服務品質</td>
+                                <td style="text-align: left ;width: 50%;">很溫暖，外套外面表面不是一般光滑面，有點霧面感，手感普普，內裡則是光滑面，口袋內是刷毛的，型好看毛好摸，163/46穿M+厚衣差不多剛好</td>
+                                <td>10644237</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td><img id="el" src="icon/oval.png"></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+            <div style='clear:both;'></div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function() {
+        //選擇東西，套用效果
+
+        $('img#el').click(function(e) {
+            //選擇一個
+            $(this).toggleClass('check');
+        })
+    })
+
+</script>
