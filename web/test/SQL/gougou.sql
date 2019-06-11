@@ -38,6 +38,35 @@ CREATE TABLE `order`
 	);
     
     
+DROP TABLE IF EXISTS `shop`;
+CREATE TABLE `shop`
+	(
+		s_id int NOT NULL auto_increment,
+        g_id VARCHAR(45) NOT NULL,
+		s_number VARCHAR(45) NOT NULL,
+        m_ac VARCHAR(60) NOT NULL,
+		PRIMARY KEY (s_id)
+	);
+    
+    
+DROP TABLE IF EXISTS `love`;
+CREATE TABLE `love`
+	(
+		l_id int NOT NULL auto_increment,
+        g_id VARCHAR(45) NOT NULL,
+        m_ac VARCHAR(60) NOT NULL,
+		PRIMARY KEY (l_id)
+	);
+    
+    
+DROP TABLE IF EXISTS `counter`;
+CREATE TABLE `counter`
+	(
+        counts VARCHAR(999) NOT NULL,
+		PRIMARY KEY (counts)
+	);
+    
+    
 DROP TABLE IF EXISTS `goods`; 
  CREATE TABLE `goods` 
 	(
@@ -78,12 +107,12 @@ INSERT INTO `goods` (`g_id`,`g_type`,`g_place`,`g_price`,`g_sales`,`g_tag`,`g_st
 DROP TABLE IF EXISTS `guest`;
 CREATE TABLE `guest`
 	(
-		g_id int NOT NULL auto_increment,
-        g_mail VARCHAR(45) NOT NULL,
-		g_tel VARCHAR(45) NOT NULL,
+		gu_id int NOT NULL auto_increment,
+        gu_mail VARCHAR(45) NOT NULL,
+		gu_tel VARCHAR(45) NOT NULL,
         s_type VARCHAR(45) NOT NULL,
-		g_content VARCHAR(45),
-		PRIMARY KEY (g_id)
+		gu_content VARCHAR(45),
+		PRIMARY KEY (gu_id)
 	);
    
 
