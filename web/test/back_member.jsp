@@ -19,7 +19,13 @@
 
         <!--後端葉面-->
         <div class="topic"><b>-後端介面-</b></div>
-        <div style="float: left; margin-top:-4%;margin-left: 5%;"><img src="icon/search.png" style="width: 5%;"><input type="search" placeholder="請輸入會員編號"><input type="button" value="搜尋"></div>
+        <div style="float: left; margin-top:-4%;margin-left: 5%;">
+            <form action="#" method="POST">
+                <img src="icon/search.png" style="width: 5%;">
+                <input type="search" id="target" name="target" placeholder="輸入會員編號或會員名稱">
+                <input type="submit" value="搜尋">
+            </form>
+        </div>
         <div id="back_t">
             <div class="back_left">
                 <div> &nbsp;</div>
@@ -58,14 +64,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                
+
                             <%
                                 String a=null;
                                 try
                                 {
                                     String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");
                                     
-                                    sql="SELECT * FROM member WHERE (m_ac like '%"+tar+"%') OR (m_name like '%"+tar+"%') ";
+                                    sql="SELECT * FROM member WHERE (m_id like '%"+tar+"%') OR (m_name like '%"+tar+"%') ";
                                     
                                 }
                                 catch(Exception e)
@@ -90,13 +96,13 @@
                                     out.println("<td>"+tmp.getString("m_mail")+"</td>");
                                     out.println("<td class='read_detail' onclick=\"window.open('window_shopping_detail.html','PHP.NET',config='height=450,width=800,toolbar=no,left=550,top=200');\">"+"查看"+"</td>"); 
                                     out.println("<td class='read_detail' onclick=\"window.open('window_member_ recipe.html','PHP.NET',config='height=450,width=1850,toolbar=no,left=15,top=200');\">"+"查看"+"</td>"); 
-                                    out.println("<td>"+"<a href='delete.jsp?m_ac="+tmp.getString("m_ac")+"'"+"class='confirmation'"+">"+"<span class='hint--right' data-hint='刪除'>"+"<img src='icon/x-button.png' class='back_delete_icon'"+"</span>"+"</a>"+"</td>");
+                                    out.println("<td>"+"<a href='delete_member.jsp?m_id="+tmp.getString("m_id")+"'"+"class='confirmation'"+">"+"<span class='hint--right' data-hint='刪除'>"+"<img src='icon/x-button.png' class='back_delete_icon'"+"</span>"+"</a>"+"</td>");
                                     out.println("</tr>");
                                     count++;
                                 }
                                 con.close();
                             %>
-                            
+
 
 
 

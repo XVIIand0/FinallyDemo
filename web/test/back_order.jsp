@@ -9,14 +9,14 @@
 <head>
     <title>期末專案</title>
     <meta charset="utf-8">
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/back_index.css">
-  
+
     <link rel="stylesheet" type="text/css" href="css/back.css">
 </head>
-
+<style>
+    .check {
+    background: url(icon/checked.png);
+}</style>
 <body>
     <div id="middle_back">
         <br>
@@ -26,7 +26,7 @@
         <div style="float: left; margin-top:-4%;margin-left: 5%;">
        <form action="#" method="post">
             <img src="icon/search.png" style="width: 5%;">
-            <input type="search"  name="target" placeholder="請輸入會員編號">
+            <input type="search"  name="target" placeholder="請輸入訂單編號或收件人">
             <input type="submit" value="搜尋">
        </form>
         </div>
@@ -74,21 +74,26 @@
                         </thead>
                         <tbody>
                              <%
-                    try{
+                  String a=null;
                             try
                                     {
-                                        String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");       sql="SELECT * FROM gougou.order WHERE (o_id like '%"+tar+"%') OR (m_name like '%"+tar+"%');";
+                                        String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");       
+                                        sql="SELECT * FROM gougou.order WHERE (o_id like '%"+tar+"%') OR (m_name like '%"+tar+"%')";
                                     }
                                     catch(Exception e)
                                     {
                                         sql="SELECT * FROM gougou.order;";
 
-                                    }                            
+                                    }         
+                                    %>                  
+                            <%
                             ResultSet tmp=con.createStatement().executeQuery(sql);
-                            sql="SELECT * FROM gougou.order;";
-                            tmp=con.createStatement().executeQuery(sql);
+                             int count=0;
                             while(tmp.next())
                             {
+                               
+                               
+                               
                                 out.println("<tr>");
                                 out.println("<td>"+tmp.getString("o_id")+"</td>");
                                 out.println("<td>"+tmp.getString("m_name")+"</td>");
@@ -99,19 +104,10 @@
                                     out.println("<td>"+tmp.getString("sent")+"</td>");  //接單日期
                                     out.println("<td>"+tmp.getString("rdate")+"</td>");  //送貨日期
                                     out.println("<td>"+"<a href='delete_order.jsp?o_id="+tmp.getString("o_id")+"'>"+"<img src='icon/cancel.png' class='confirmation'>"+"</a>"+"</td>");   //移除
-                                    out.println("<td>"+"<img src='icon/oval.png'>"+"</td>");    //送件
+                                  out.println("<td>"+"<img src='icon/oval.png' id='el'>"+"</td>");
                                     out.println("</tr>");
+                                   count++;
                                     }
-
-          
-                            
-                           
-                              }
-                        catch(Exception err)
-                        {
-                            out.write("<script>alert('查無此訂單');</script>");
-                            response.setHeader("refresh","0;URL=b_order.jsp");
-                        }
                         con.close();
                     %>
                                
@@ -146,10 +142,11 @@
     $(document).ready(function() {
         //選擇東西，套用效果
 
-        $('img').click(function(e) {
+        $('img#el').click(function(e) {
             //選擇一個
             $(this).toggleClass('check');
         })
     })
 
 </script>
+
