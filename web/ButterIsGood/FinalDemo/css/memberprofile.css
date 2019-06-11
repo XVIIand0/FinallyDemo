@@ -114,7 +114,13 @@ body
 
 .member-table tr td
 {
-	padding: 25px;
+	padding: 28px;
+}
+
+.member-input input
+{
+	padding: 8px;
+	width: 160%;
 }
 
 .change-button
@@ -201,40 +207,6 @@ body
 {
 	background: #2c87f0;
 	transition: 0.3s ease;
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 300px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
-  animation: fadeEffect 0.3s;
-}
-
-.modal-content {
-  background-color: #FEFEFE;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #888;
-  width: 45%;
-  font-size: 20pt;
-  text-align: center;
-  line-height:183px;
-  border-radius: 3px;
-}
-
-.modal-content input
-{
-	width: 50%;
-	height: 35px;
-	font-size: 16pt;
-	vertical-align:middle
 }
 
 .OK-button
