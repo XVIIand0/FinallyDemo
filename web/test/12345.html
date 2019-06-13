@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/12345.css">
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.js"></script>
+	</head>
+	<body>
+
+		<div class="house_div">
+
+		<div class="toggle toggle--daynight">
+			<input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
+			<label class="toggle--btn" for="toggle--daynight">
+				<span class="toggle--feature"></span>
+			</label>
+		</div>
+			
+				<img src="images/shop.png" usemap="#image-map">
+			<map  name="image-map">
+				<area target="" alt="連到森林區" title="連到森林區" href="#" coords="267,115,487,248" shape="rect">
+    			<area target="" alt="連到藤蔓區" title="連到藤蔓區" href="#" coords="328,453,420,650" shape="rect">
+    			<area target="" alt="關於我們" title="關於我們" href="#" coords="106,274,629,404" shape="rect">
+    			<area target="" alt="聯絡我們" title="聯絡我們" href="#" coords="113,534,157,593" shape="rect">
+    			<area target="" alt="商品總覽" title="商品總覽" href="#" coords="222,487,274,676" shape="rect">
+   				<area target="" alt="廣告" title="廣告" href="#" coords="536,464,589,674" shape="rect">
+			</map>
+			<div class="woman_img">
+				<a href="#" title="購物流程"><img src="images/woman.png"></a>
+			</div>
+			<div class="cat_img">
+				<a href="#" title="食譜"><img src="images/cat.png"></a>
+			</div>
+			<div  class="light_img">
+				<img src="images/light.png">
+			</div>
+		</div>
+		<script> 
+		var to = 1;
+		
+			$(".toggle--btn").click(function(){ 
+				if(to == 1){
+				
+  				$(".light_img img").removeAttr('style').addClass("hide");
+  				to = 0;
+
+		}
+		else if(to == 0){
+
+				$(".light_img img").removeAttr('style').removeClass("hide");
+				to = 1;
+		}
+		});
+		</script>
+	</body>
+</html>
