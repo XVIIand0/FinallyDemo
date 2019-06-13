@@ -184,9 +184,119 @@
 	left: 35.6%;
 	top: 31%;
 }
+
 .hide{
 	display:none;
 	transition: opacity 1s linear;  
   	transform:translate(0);
   	opacity: 1;
 }
+
+.forest
+{
+  position: absolute;
+  z-index: 999;
+  width: 220px;
+  height: 133px;
+  top: 20.8%;
+  left: 43.6%;
+  opacity: 0;
+}
+
+.about
+{
+  position: absolute;
+  z-index: 999;
+  width: 523px;
+  height: 130px;
+  top: 39.6%;
+  left: 35.1%;
+  opacity: 0;
+}
+
+.vine
+{
+  position: absolute;
+  z-index: 999;
+  width: 92px;
+  height: 197px;
+  top: 60.7%;
+  left: 46.9%;
+  opacity: 0;
+}
+
+.connection
+{
+  position: absolute;
+  z-index: 999;
+  width: 44px;
+  height: 59px;
+  top: 70.8%;
+  left: 35.4%;
+  opacity: 0;
+}
+
+.overview
+{
+  position: absolute;
+  z-index: 999;
+  width: 52px;
+  height: 189px;
+  top: 65%;
+  left: 41.2%;
+  opacity: 0;
+}
+
+.ad
+{
+  position: absolute;
+  z-index: 999;
+  width: 53px;
+  height: 210px;
+  top: 62.4%;
+  left: 57.8%;
+  opacity: 0;
+}
+
+.forest_img
+{
+  position: absolute;
+  top: 24%;
+  left: 57%;
+}
+
+.recipe_img
+{
+  position: absolute;
+  top: 83%;
+  left: 70%;
+}
+
+.vine_img
+{
+  position: absolute;
+  top: 66%;
+  left: 52.4%;
+}
+
+.connection_img
+{
+  position: absolute;
+  top: 65%;
+  left: 9%;
+}
+
+.overview_img
+{
+  position: absolute;
+  top: 46%;
+  left: 7.8%;
+}
+
+.ad_img
+{
+  position: absolute;
+  top: 41%;
+  left: 61%;
+}
+
