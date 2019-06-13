@@ -26,16 +26,22 @@ DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order`
 	(
 		o_id int NOT NULL auto_increment,
-        m_name VARCHAR(45) NOT NULL,
+        each_o_id int,
+        m_id VARCHAR(45) NOT NULL,
 		m_phone VARCHAR(45) NOT NULL,
         m_ad VARCHAR(60) NOT NULL,
 		o_content VARCHAR(60),
 		rdate datetime,
-        bought VARCHAR(45),
+        product int,
+        quantity VARCHAR(45),
 		deal VARCHAR(45),
         sent timestamp,
 		PRIMARY KEY (o_id)
 	);
+INSERT INTO `order` (`o_id`,`each_o_id`,`m_id`,`m_phone`,`m_ad`,`o_content`,`rdate`,`product`,`quantity`,`deal`,`sent`) VALUES (2,1,1,'0912','台灣320桃園市中壢區中北路200號','希望是女神送貨','2019/06/15',1,2,'996','2019-06-10 13:25:27');
+INSERT INTO `order` (`o_id`,`each_o_id`,`m_id`,`m_phone`,`m_ad`,`o_content`,`rdate`,`product`,`quantity`,`deal`,`sent`) VALUES (3,1,1,'0912','台灣320桃園市中壢區中北路200號','希望是女神送貨','2019/06/15',2,3,'996','2019-06-10 13:25:27');
+INSERT INTO `order` (`o_id`,`each_o_id`,`m_id`,`m_phone`,`m_ad`,`o_content`,`rdate`,`product`,`quantity`,`deal`,`sent`) VALUES (4,1,1,'0912','台灣320桃園市中壢區中北路200號','希望是女神送貨','2019/06/15',5,1,'996','2019-06-10 13:25:27');
+
     
     
 DROP TABLE IF EXISTS `shopping`;
@@ -47,6 +53,8 @@ CREATE TABLE `shopping`
         s_amount VARCHAR(45) NOT NULL,
 		PRIMARY KEY (s_id)
 	);
+INSERT INTO `shopping` (`s_id`,`g_id`,`m_ac`,`s_amount`) VALUES (13,'3','ayen','1');
+INSERT INTO `shopping` (`s_id`,`g_id`,`m_ac`,`s_amount`) VALUES (14,'3','null','1');
     
     
 DROP TABLE IF EXISTS `love`;
@@ -55,8 +63,18 @@ CREATE TABLE `love`
 		love_id int NOT NULL auto_increment,
         g_id VARCHAR(45) NOT NULL,
         m_ac VARCHAR(60) NOT NULL,
+        love_amount VARCHAR(45) NOT NULL,
 		PRIMARY KEY (love_id)
 	);
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (1,'3','null','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (3,'2','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (4,'10','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (5,'2','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (6,'8','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (7,'18','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (8,'5','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (9,'4','ayen','1');
+INSERT INTO `love` (`love_id`,`g_id`,`m_ac`,`love_amount`) VALUES (10,'7','null','1');
     
     
 DROP TABLE IF EXISTS `counter`;
@@ -65,6 +83,7 @@ CREATE TABLE `counter`
         counts VARCHAR(999) NOT NULL,
 		PRIMARY KEY (counts)
 	);
+INSERT INTO `counter` (`counts`) VALUES ('0');
     
     
 DROP TABLE IF EXISTS `good`; 
@@ -107,13 +126,18 @@ INSERT INTO `good` (`g_id`,`g_type`,`g_place`,`g_price`,`g_sales`,`g_tag`,`g_sto
 DROP TABLE IF EXISTS `guest`;
 CREATE TABLE `guest`
 	(
-		gu_id int NOT NULL auto_increment,
-        gu_mail VARCHAR(45) NOT NULL,
-		gu_tel VARCHAR(45) NOT NULL,
-        s_type VARCHAR(45) NOT NULL,
-		gu_content VARCHAR(45),
-		PRIMARY KEY (gu_id)
+		guest_no int NOT NULL auto_increment,
+        guest_mail VARCHAR(45) NOT NULL,
+		guest_tel VARCHAR(45) NOT NULL,
+        suggest_type VARCHAR(45) NOT NULL,
+		guest_content VARCHAR(45),
+		PRIMARY KEY (guest_no)
 	);
+INSERT INTO `guest` (`guest_no`,`guest_mail`,`guest_tel`,`suggest_type`,`guest_content`) VALUES (1,'tracy@gmail.com','0913454266','菇菇品質','我覺得香菇很新鮮美味');
+INSERT INTO `guest` (`guest_no`,`guest_mail`,`guest_tel`,`suggest_type`,`guest_content`) VALUES (2,'a@gmail.com','912415427','配送速度','213');
+INSERT INTO `guest` (`guest_no`,`guest_mail`,`guest_tel`,`suggest_type`,`guest_content`) VALUES (3,'aurore87601@yahoo.com.tw','912415427','配送速度','456');
+INSERT INTO `guest` (`guest_no`,`guest_mail`,`guest_tel`,`suggest_type`,`guest_content`) VALUES (4,'aurore87601@yahoo.com.tw','912415427','菇菇品質','4566666');
+
    
 
 DROP TABLE IF EXISTS `receiver`; 
@@ -134,7 +158,7 @@ DROP TABLE IF EXISTS `recipe`;
 		re_id int NOT NULL auto_increment,
         re_time datetime,
 		re_name VARCHAR(10) NOT NULL,
-		re_use VARCHAR(30) NOT NULL,
+		re_use VARCHAR(100) NOT NULL,
         re_am int,
         re_ct int,
         re_content VARCHAR(255),
