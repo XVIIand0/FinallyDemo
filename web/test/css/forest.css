@@ -1,0 +1,163 @@
+html{
+    overflow-x:hidden;
+overflow-y:hidden;
+    
+}
+body{ margin: 0; padding: 0; }
+.dead
+{
+  position: absolute;
+  top: 72%;
+  left: 73%;
+      -webkit-animation-name: example6; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example6;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example6 {
+  from { width:0px; height :0px;margin-top:480px;margin-left:240px}
+  to { width:480px;height:257px;margin-top:0px;margin-left:0px}
+}
+
+.hat
+{
+  position: absolute;
+  top: 78%;
+  left: 60%;
+         -webkit-animation-name: example7; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example7;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example7 {
+  from { width:0px; height :0px;margin-top:158px;margin-left:79px}
+  to { width:158px;height:185px;margin-top:0px;margin-left:0px}
+}
+
+.snow
+{
+  position: absolute;
+  top: 30%;
+  left: 44%;
+     -webkit-animation-name: example5; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example5;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example5 {
+  from { width:0px; height :0px;margin-top:365px;margin-left:182px}
+  to { width:365px;height:367px;margin-top:0px;margin-left:0px}
+}
+
+.txoic
+{
+  position: absolute;
+  top:18%;
+  left: 18.5%;
+    -webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example4;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example4 {
+ from { width:0px; height :0px;margin-top:1200px;margin-left:600px}
+  to { width:1200px;height:445px;margin-top:0px;margin-left:0px}
+}
+
+.magic
+{
+  position: absolute;
+  top: 45.5%;
+  left: 27.5%;
+     -webkit-animation-name: example3; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example3;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example3 {
+  from { width:0px; height :0px;margin-top:196px;margin-left:98px}
+  to { width:196px;height:458px;margin-top:0px;margin-left:0px}
+}
+
+.stick
+{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+          -webkit-animation-name: example1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example1;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example1 {
+  from { width:0px; height :0px;margin-top:139px;margin-left:69.5px}
+  to { width:139px;height:187px;margin-top:0px;margin-left:0px}
+}
+
+.pink
+{
+  position: absolute;
+  top: 14%;
+  left: 75%;
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example {
+ from { width:0px; height :0px;margin-top:240px;margin-left:120px}
+  to { width:240px;height:223px;margin-top:0px;margin-left:0px}
+}
+
+.blood
+{
+  position: absolute;
+  top: 4%;
+  left: 7%;
+     -webkit-animation-name: example2; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example2;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example2 {
+  from { width:0px; height :0px;margin-top:1714px;margin-left:857px}
+  to { width:1714px;height:495px;margin-top:0px;margin-left:0px}
+}
+.gold
+{
+  position: absolute;
+  top: 82%;
+  left: 18%;
+     -webkit-animation-name: example8; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example8;
+  animation-duration: 2s;
+}
+@-webkit-keyframes example8 {
+  from { width:0px; height :0px;margin-top:170px;margin-left:85px}
+  to { width:170px;height:210px;margin-top:0px;margin-left:0px}
+}
+.snowsnow{
+  position: absolute;
+  z-index: 999;
+  top: 20%;
+  left: 32%;    
+}
+.laught{
+  position: absolute;
+  z-index: 999;
+  top: 75%;
+  left: 60%;  
+}
+.mmagic{
+  position: absolute;
+  z-index: 999;
+  top: 40%;
+  left: 23%;
+}
+.bobble{
+  position: absolute;
+  z-index: 999;
+  top: 4%;
+  left: 70%;
+}
