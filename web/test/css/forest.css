@@ -126,7 +126,7 @@ body{ margin: 0; padding: 0; }
 .gold
 {
   position: absolute;
-  top: 82%;
+  top: 78%;
   left: 18%;
      -webkit-animation-name: example8; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
@@ -141,23 +141,136 @@ body{ margin: 0; padding: 0; }
   position: absolute;
   z-index: 999;
   top: 20%;
-  left: 32%;    
+  left: 32%;   
+     animation-iteration-count: infinite;
+    animation-direction: alternate;
+ 
+    -webkit-animation-name: blink; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1.2s; /* Chrome, Safari, Opera */
+    animation-name: blink;
+    animation-duration: 1.2s;
+    
 }
+
 .laught{
   position: absolute;
   z-index: 999;
   top: 75%;
   left: 60%;  
+    -webkit-transform-origin: bottom center;
+  -moz-transform-origin: bottom center;
+  -o-transform-origin: bottom center;
+  transform-origin: bottom center;
+  animation: swing 5s .15s linear infinite;
+  -moz-animation: swing 5s .15s linear infinite; /* Firefox */
+  -webkit-animation: swing 5s .15s linear infinite; /* Safari and Chrome */
+
 }
+
+@-webkit-keyframes swing {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+@-moz-keyframes swing {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes swing {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes swing {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  50%,100% {
+    transform: rotate(0deg);
+  }
+}
+
 .mmagic{
   position: absolute;
   z-index: 999;
   top: 40%;
   left: 23%;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+ 
+    -webkit-animation-name: blink; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 0.8s; /* Chrome, Safari, Opera */
+    animation-name: blink;
+    animation-duration: 0.8s;
 }
 .bobble{
   position: absolute;
   z-index: 999;
   top: 4%;
   left: 70%;
+     animation-iteration-count: infinite;
+    animation-direction: alternate;
+ 
+    -webkit-animation-name: blink; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: blink;
+    animation-duration: 2s;
 }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes blink {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+ 
+/* Standard syntax */
+@keyframes blink {
+     from {opacity: 0;}
+    to {opacity: 1;}
+}
+
