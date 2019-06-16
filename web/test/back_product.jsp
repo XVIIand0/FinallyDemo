@@ -14,6 +14,38 @@
 </head>
 
 <body>
+   <%
+                                try{
+                                        Cookie getC[]=request.getCookies();
+                                        for(int i=0;i<getC.length;i++)
+                                        {
+                                            if(getC[i].getName().equals("getin"))
+                                            {
+                                                String[] sp=getC[i].getValue().split("-");
+                                                acc=sp[0];
+                                                pas=sp[1];
+                                            }
+                                        }
+                                        sql="SELECT * FROM member WHERE m_ac='"+acc+"' and m_pw='"+pas+"'";
+                                        ResultSet man=con.createStatement().executeQuery(sql);
+                                        man.next();
+                                        if(man.getString("m_level").equals("1"))
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                            response.setHeader("refresh","0;URL=index.jsp");
+                                        }
+                                    }
+                                catch(Exception e)
+                                    {
+                                        out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                        response.setHeader("refresh","0;URL=index.jsp");
+                                    }
+                               
+                            %>
     <div id="middle_back">
         <br>
         <div class="topic"><b>-後端介面-</b></div>
@@ -25,7 +57,7 @@
             <div style="float: left; margin-top:-4%;margin-left: 5%;">
                 <form action="#" method="POST">
                     <img src="icon/search.png" style="width: 5%;">
-                    <input type="search" id="target" name="target" placeholder="輸入會員編號或會員名稱">
+                    <input type="search" id="target" name="target" placeholder="搜尋商品名稱">
                     <input type="submit" value="搜尋">
                 </form>
             </div>
@@ -37,16 +69,16 @@
 
         <div> &nbsp;</div>
         <div>
-            <a href="back_member.jsp" style="color:#444444; ">
+            <a href="b_member.jsp" style="color:#444444; ">
                 <div class="about_lable"> 會員管理</div>
             </a>
-            <a href="back_product.jsp" style="color: black">
+            <a href="b_product.jsp" style="color: black">
                 <div class="about_lable_main">商品管理</div>
             </a>
-            <a href="back_order.jsp" style="color: #444444">
+            <a href="b_order.jsp" style="color: #444444">
                 <div class="about_lable"> 訂單管理</div>
             </a>
-            <a href="back_common.jsp" style="color: #444444">
+            <a href="b_common.jsp" style="color: #444444">
                 <div class="about_lable"> 訪客回饋</div>
             </a>
         </div>
@@ -73,16 +105,17 @@
                     </tr>
                 </thead>
                 <tbody>
+                   
                     <%
                     try{
                             try
                             {
                                 String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");
-                                sql="SELECT * FROM goods WHERE (g_id like '%"+tar+"%') OR (g_type like '%"+tar+"%')";
+                                sql="SELECT * FROM good WHERE (g_id like '%"+tar+"%') OR (g_type like '%"+tar+"%')";
                             }
                             catch(Exception e)
                             {
-                                sql="SELECT * FROM goods;";
+                                sql="SELECT * FROM good;";
                             }
 
                             ResultSet tmp=con.createStatement().executeQuery(sql);
@@ -105,7 +138,7 @@
                                     out.println("<td class='td_width_10'>"+"<img src='icon/exclamation-mark.png' >"+"</td>");
                                 }
                                 out.println("<td>"+"<input type='text' name='g_id' class='td_width_80' placeholder='商品編號' value='"+tmp.getString("g_id")+"'>"+"</td>");
-                                out.println("<td >"+"<img src='goods/"+tmp.getString("g_id")+".png'>"+"</td>");
+                                out.println("<td >"+"<img src='"+tmp.getString("g_photo")+"'>"+"</td>");
                                 out.println("<td>"+"<input type='text' name='g_type'  placeholder='品種' value='"+tmp.getString("g_type")+"'>"+"</td>");
                                 out.println("<td>"+"<input type='text' name='g_tag' class='td_width_80' placeholder='屬性' value='"+tmp.getString("g_tag")+"'>"+"</td>");
                                 out.println("<td>"+"<input type='text' name='g_price' class='td_width_80' placeholder='價錢(包)' value='"+tmp.getString("g_price")+"'>"+"</td>");

@@ -1,3 +1,6 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<%@ page import = "java.sql.*, java.util.*" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,14 +13,14 @@
 	<div style="width: 1890px;height:950px;">
 	<img src="images/bg.png" >
 		<div >
-				<img class="dead" src="images/dead.png">
+				<a href="product.jsp?gid=15"><img class="dead" href="" src="images/dead.png"></a>
 				<img class="hat" src="images/hat.png">
-				<img class="snow" src="images/snow.png">
-				<img class="txoic" src="images/txoic.png">
-				<img class="magic" src="images/magic.png">
-				<img class="stick" src="images/stick.png">
-				<img class="pink" src="images/pink.png">
-				<img class="blood" src="images/blood.png">
+				<a href="product.jsp?gid=13"><img class="snow" src="images/snow.png"></a>
+				<a href="product.jsp?gid=19"><img class="txoic"  src="images/txoic.png"></a>
+				<a href="product.jsp?gid=9"><img class="magic" src="images/magic.png"></a>
+				<a href="product.jsp?gid=18"><img class="stick" src="images/stick.png"></a>
+				<a href="product.jsp?gid=10"><img class="pink" src="images/pink.png"></a>
+				<a href="product.jsp?gid=14"><img class="blood" src="images/blood.png"></a>
 				<img class="gold" src="images/gold.png">
 				<img class="mmagic" src="images/mmagic.png">
 				<img class="bobble" src="images/bobble.png">

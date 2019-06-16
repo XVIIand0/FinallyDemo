@@ -18,6 +18,38 @@
     background: url(icon/checked.png);
 }</style>
 <body>
+ <%
+                                try{
+                                        Cookie getC[]=request.getCookies();
+                                        for(int i=0;i<getC.length;i++)
+                                        {
+                                            if(getC[i].getName().equals("getin"))
+                                            {
+                                                String[] sp=getC[i].getValue().split("-");
+                                                acc=sp[0];
+                                                pas=sp[1];
+                                            }
+                                        }
+                                        sql="SELECT * FROM member WHERE m_ac='"+acc+"' and m_pw='"+pas+"'";
+                                        ResultSet man=con.createStatement().executeQuery(sql);
+                                        man.next();
+                                        if(man.getString("m_level").equals("1"))
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                            response.setHeader("refresh","0;URL=index.jsp");
+                                        }
+                                    }
+                                catch(Exception e)
+                                    {
+                                        out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                        response.setHeader("refresh","0;URL=index.jsp");
+                                    }
+                               
+                            %>
     <div id="middle_back">
         <br>
 
@@ -33,16 +65,16 @@
         <div id="back_t">
             <div class="back_left">
                 <div> &nbsp;</div>
-                <a href="back_member.jsp" style="color: black">
+                <a href="b_member.jsp" style="color: black">
                     <div class="about_lable_main"> 會員管理</div>
                 </a>
-                <a href="back_product.jsp" style="color: #444444">
+                <a href="b_product.jsp" style="color: #444444">
                     <div class="about_lable">商品管理</div>
                 </a>
-                <a href="back_order.jsp" style="color: #444444">
+                <a href="b_order.jsp" style="color: #444444">
                     <div class="about_lable"> 訂單管理</div>
                 </a>
-                <a href="back_common.jsp" style="color: #444444">
+                <a href="b_common.jsp" style="color: #444444">
                     <div class="about_lable"> 訪客回饋</div>
                 </a>
 
@@ -73,16 +105,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                         
                              <%
                   String a=null;
                             try
                                     {
                                         String tar = new String(request.getParameter("target").getBytes("ISO-8859-1"),"UTF-8");       
-                                        sql="SELECT * FROM gougou.order WHERE (o_id like '%"+tar+"%') OR (m_name like '%"+tar+"%')";
+                                        sql="SELECT * FROM gougou.order WHERE (o_id like '%"+tar+"%') OR (m_id like '%"+tar+"%')";
                                     }
                                     catch(Exception e)
                                     {
-                                        sql="SELECT * FROM gougou.order;";
+                                        sql="SELECT * FROM gougou.order group by o_id;";
 
                                     }         
                                     %>                  
@@ -96,11 +129,12 @@
                                
                                 out.println("<tr>");
                                 out.println("<td>"+tmp.getString("o_id")+"</td>");
-                                out.println("<td>"+tmp.getString("m_name")+"</td>");
+                                out.println("<td>"+tmp.getString("m_id")+"</td>");
                                 out.println("<td>"+tmp.getString("m_phone")+"</td>");
                                  out.println("<td style='text-align:left'>"+tmp.getString("m_ad")+"</td>");      //地址
-                                 out.println("<td style='text-align:left;font-size:14px;'>"+tmp.getString("o_content")+"</td>");  //備註
-                                 out.println("<td class='read_detail' onclick=\"window.open('window_order_detail.html','PHP.NET',config='height=450,width=450,toolbar=no,left=550,top=200');\">"+"查看"+"</td>"); //訂單明細
+                                 out.print("<td style='text-align:left;font-size:14px;'>"+tmp.getString("o_content")+"</td>");  //備註
+                                 out.println("<td class='read_detail' onclick=\"window.open('window_order_detail.jsp?each_o_id="+tmp.getString("each_o_id")+"','PHP.NET',config='height=450,width=450,toolbar=no,left=550,top=200');\">"+"查看"+"</td>"); //訂單明細 
+								  out.println();
                                     out.println("<td>"+tmp.getString("sent")+"</td>");  //接單日期
                                     out.println("<td>"+tmp.getString("rdate")+"</td>");  //送貨日期
                                     out.println("<td>"+"<a href='delete_order.jsp?o_id="+tmp.getString("o_id")+"'>"+"<img src='icon/cancel.png' class='confirmation'>"+"</a>"+"</td>");   //移除
