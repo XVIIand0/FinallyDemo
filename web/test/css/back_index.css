@@ -1,0 +1,196 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(img/pigpig.png);
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+header {
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 113px;
+    background-color: #fcfcfc;
+    width: 100%;
+    z-index: 20;
+    /*將圖片層蓋住*/
+}
+
+#logo {
+    margin-top: -0.5%;
+    margin-left: 5%;
+    height: 115px;
+    width: 20%;
+
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    max-width: 110%;
+    max-height: 110%;
+    z-index: 30;
+
+}
+
+
+
+/*側邊固定按鈕*/
+#funtion {
+    position: fixed;
+    margin-left: 82%;
+    top: 65px;
+}
+
+#funtion_login {
+    position: fixed;
+    margin-left: 70%;
+    top: 67px;
+}
+
+/*login */
+.righticon_img {
+    z-index: 2;
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s linear;
+}
+
+.righticon_img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*側邊固定按鈕*/
+/*至頂按鈕*/
+.top_up {
+    margin: 1%;
+    width: 42px;
+    height: 42px;
+    right: 0.5%;
+    top: 85%;
+    bottom: 25px;
+    position: fixed;
+    cursor: pointer;
+    opacity: .8;
+    transition: all 0.2s linear;
+    z-index: 1;
+}
+
+.top_up:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*至頂按鈕結束*/
+
+#middle {
+    background-color: white;
+
+
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*商品一覽照片*/
+.product {
+    width: 24.73%;
+}
+
+.product_1 {
+    width: 100%;
+}
+
+/*商品一覽照片*/
+/*商品一覽字型*/
+.topic {
+    font-size: 24px;
+
+    margin: 2%;
+    text-align: center;
+}
+
+/*商品一覽字型*/
+
+/*成員照片*/
+.member-photo {
+    width: 250px;
+}
+
+/*成員照片*/
+
+footer {
+    font-size: 16px;
+    background-color: #000000cc;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border-top: 2px solid #666666;
+}
+
+
+
+#shopbottom {
+    padding: 1%;
+
+    margin: 2%;
+}
+
+.inner_product {
+    width: 25%;
+    float: left;
+}
+
+.index_protuct {
+
+    width: 100%;
+
+    margin-bottom: 2%;
+}
+
+.product_text {
+
+    font-size: 18px;
+    text-align: center;
+    color: #272727;
+    font-weight: bold;
+}
+
+.footer_column {
+    float: left;
+    width: 19%;
+    
+    height: 150px;
+
+}
+
+
+.footer_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.product_price {
+    text-align: center;
+    color: #272727;
+    font-weight: bold;
+}
+
+.product_title {
+
+    color: #272727;
+    font-weight: bold;
+    font-size: 20px;
+}

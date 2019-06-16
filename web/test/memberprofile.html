@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>member profile</title>
+		<link rel="stylesheet" href="css/memberprofile.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	</head>
+	<body>
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'MemberProfile')" id="defaultOpen">會員資料</button>
+			<button class="tablinks" onclick="openCity(event, 'TransactionRecord')">購物紀錄</button>
+			<button class="tablinks" onclick="openCity(event, 'Recipe')">個人食譜</button>
+		</div>
+		
+		<div id="MemberProfile" class="tabcontent">
+			<div class="member-card">
+				<div class="member-card_content">
+					<div class="member-header">
+						<font>我的檔案</font>
+					</div>
+					<hr class="member-hr">
+					<div class="member-grid">
+						<div class="member-content">
+							<table class="member-table">
+								<tr>
+									<td class="content-title">密碼</td>
+									<td>12345</td>
+									<td><button class="change-button" id="btn1">變更</button></td>
+								</tr>
+								<tr>
+									<td class="content-title">Email</td>
+									<td>12345@gmail.com</td>
+									<td><button  class="change-button" id="btn2">變更</button></td>
+								</tr>
+								<tr>
+									<td class="content-title">連絡電話</td>
+									<td>0912345678</td>
+									<td><button class="change-button" id="btn3">變更</button></td>
+								</tr>
+								<tr>
+									<td class="content-title">地址</td>
+									<td>12312311231332231323</td>
+									<td><button class="change-button" id="btn4">變更</button></td>
+								</tr>
+							</table>
+						</div>
+						<div class="member-photo">
+							<form action="" enctype="multipart/form-data">
+								<div class="member-head">
+									<img class="img100" id="img1" src="#"/>
+								</div>
+								<div class="select-photo">
+									<label>
+										<input type="file" style="display:none;" onchange="readURL(this)" targetID="img1" accept="image/gif, image/jpeg, image/png"/>
+										上傳圖片
+									</label>
+								</div>
+								<button class="member-change-button">儲存</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+							<!--新密碼-->
+							<div id="Modal1" class="modal">
+								<div class="modal-content">
+									<form class="change-form" method="post">
+										新密碼：<input type="text">
+										<button class="OK-button">確認</button>
+									</form>
+								</div>
+							</div>
+
+							<!--新Email-->
+							<div id="Modal2" class="modal">
+								<div class="modal-content">
+									<form class="change-form" method="post">
+										新Email：<input type="email">
+										<button class="OK-button">確認</button>
+									</form>
+								</div>
+							</div>
+
+							<!--新連絡電話-->
+							<div id="Modal3" class="modal">
+								<div class="modal-content">
+									<form class="change-form" method="post">
+										新連絡電話：<input type="tel">
+										<button class="OK-button">確認</button>
+									</form>
+								</div>
+							</div>
+
+							<!--新地址-->
+							<div id="Modal4" class="modal">
+								<div class="modal-content">
+									<form class="change-form" method="post">
+										新地址：<input type="text">
+										<button class="OK-button">確認</button>
+									</form>
+								</div>
+							</div>
+
+	<div id="TransactionRecord" class="tabcontent">
+		<div class="page-button">
+			<a href="#" class="previous">&laquo; 上一頁</a>
+			<a href="#" class="Next-Previous">1</a>
+			<a href="#" class="Next-Previous">2</a>
+			<a href="#" class="next">下一頁 &raquo;</a>
+		</div>
+			<div class="whole-card">
+		<div class="order-card first-card">
+			<div class="order-card_content">
+				<tr>
+					<div>
+						<div  class="order-number-align">
+							訂單標號:<td class="order-number">12345</td>
+						</div>
+						<div class="buying-time-align">
+							購買時間:<td class="buying-time">2019-05-32 00:00:00</td><br>
+						</div>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<div class="product-name-align">
+							商品名稱:<td class="product-name">厲害的菇菇</td>
+						</div>
+						<div class="quantity-align">
+							數量:<td class="quantity">12345</td>
+						</div>
+					</div>
+				</tr>
+			</div>
+			<div class="dot-circle">
+				<div class="left-circle"></div>
+				<div class="right-circle"></div>
+			</div>
+			<div class="order-card_bottom">
+				
+
+				
+
+
+
+				<div class="review-all">
+					<div class="review-title">
+						<font>商品評論:</font>
+					</div>
+					<div class="review">
+						<textarea class="product-review"></textarea>
+					</div>
+				</div>
+				<input class="submit-button" type="submit" value="送出">
+			</div>
+		</div>
+		<div class="order-card">
+			<div class="order-card_content">
+				<tr>
+					<div>
+						<div  class="order-number-align">
+							訂單標號:<td class="order-number">12345</td>
+						</div>
+						<div class="buying-time-align">
+							購買時間:<td class="buying-time">2019-05-32 00:00:00</td><br>
+						</div>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<div class="product-name-align">
+							商品名稱:<td class="product-name">厲害的菇菇</td>
+						</div>
+						<div class="quantity-align">
+							數量:<td class="quantity">12345</td>
+						</div>
+					</div>
+				</tr>
+			</div>
+			<div class="dot-circle">
+				<div class="left-circle"></div>
+				<div class="right-circle"></div>
+			</div>
+			<div class="order-card_bottom">
+				
+
+
+
+
+
+				<div class="review-all">
+					<div class="review-title">
+						<font>商品評論:</font>
+					</div>
+					<div class="review">
+						<textarea class="product-review"></textarea>
+					</div>
+				</div>
+				<input class="submit-button" type="submit" value="送出">
+			</div>
+		</div>
+		<div class="order-card">
+			<div class="order-card_content">
+				<tr>
+					<div>
+						<div  class="order-number-align">
+							訂單標號:<td class="order-number">12345</td>
+						</div>
+						<div class="buying-time-align">
+							購買時間:<td class="buying-time">2019-05-32 00:00:00</td><br>
+						</div>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<div class="product-name-align">
+							商品名稱:<td class="product-name">厲害的菇菇</td>
+						</div>
+						<div class="quantity-align">
+							數量:<td class="quantity">12345</td>
+						</div>
+					</div>
+				</tr>
+			</div>
+			<div class="dot-circle">
+				<div class="left-circle"></div>
+				<div class="right-circle"></div>
+			</div>
+			<div class="order-card_bottom">
+				
+
+
+
+
+
+				<div class="review-all">
+					<div class="review-title">
+						<font>商品評論:</font>
+					</div>
+					<div class="review">
+						<textarea class="product-review"></textarea>
+					</div>
+				</div>
+				<input class="submit-button" type="submit" value="送出">
+			</div>
+		</div>
+		<div class="order-card">
+			<div class="order-card_content">
+				<tr>
+					<div>
+						<div  class="order-number-align">
+							訂單標號:<td class="order-number">12345</td>
+						</div>
+						<div class="buying-time-align">
+							購買時間:<td class="buying-time">2019-05-32 00:00:00</td><br>
+						</div>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<div class="product-name-align">
+							商品名稱:<td class="product-name">厲害的菇菇</td>
+						</div>
+						<div class="quantity-align">
+							數量:<td class="quantity">12345</td>
+						</div>
+					</div>
+				</tr>
+			</div>
+			<div class="dot-circle">
+				<div class="left-circle"></div>
+				<div class="right-circle"></div>
+			</div>
+			<div class="order-card_bottom">
+				
+
+
+
+
+
+				<div class="review-all">
+					<div class="review-title">
+						<font>商品評論:</font>
+					</div>
+					<div class="review">
+						<textarea class="product-review"></textarea>
+					</div>
+				</div>
+				<input class="submit-button" type="submit" value="送出">
+			</div>
+		</div>
+		<div class="order-card">
+			<div class="order-card_content">
+				<tr>
+					<div>
+						<div  class="order-number-align">
+							訂單標號:<td class="order-number">12345</td>
+						</div>
+						<div class="buying-time-align">
+							購買時間:<td class="buying-time">2019-05-32 00:00:00</td><br>
+						</div>
+					</div>
+				</tr>
+				<tr>
+					<div>
+						<div class="product-name-align">
+							商品名稱:<td class="product-name">厲害的菇菇</td>
+						</div>
+						<div class="quantity-align">
+							數量:<td class="quantity">12345</td>
+						</div>
+					</div>
+				</tr>
+			</div>
+			<div class="dot-circle">
+				<div class="left-circle"></div>
+				<div class="right-circle"></div>
+			</div>
+			<div class="order-card_bottom">
+				
+
+
+
+
+
+				<div class="review-all">
+					<div class="review-title">
+						<font>商品評論:</font>
+					</div>
+					<div class="review">
+						<textarea class="product-review"></textarea>
+					</div>
+				</div>
+				<input class="submit-button" type="submit" value="送出">
+			</div>
+		</div>
+	</div>
+	<div class="page-button bottom-page-button">
+			<a href="#" class="previous">&laquo; 上一頁</a>
+			<a href="#" class="Next-Previous">1</a>
+			<a href="#" class="Next-Previous">2</a>
+			<a href="#" class="next">下一頁 &raquo;</a>
+		</div>
+</div>
+
+<div id="Recipe" class="tabcontent">
+	<div class="page-button">
+			<a href="#" class="previous">&laquo; 上一頁</a>
+			<a href="#" class="Next-Previous">1</a>
+			<a href="#" class="Next-Previous">2</a>
+			<a href="#" class="next">下一頁 &raquo;</a>
+		</div>
+
+		<div class="whole-recipe">
+			<div class="recipe-card first-card">
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="upload-date">
+						<tr>
+							<td>上傳日期:</td>
+							<td>123456789</td>
+						</tr>
+					</div>
+					<div class="recipe-card-title">
+						<input type="text" name="" placeholder="食譜名稱">
+					</div>
+					<div class="recipe-card-content">
+						<div class="recipe-card-content-left">
+							<div class="recipe-photo">
+								<img class="img100" id="img2" src="#"/>
+							</div>
+							<div class="recipe-select-photo">
+								<label>
+									<input type="file" style="display:none;" onchange="readURL(this)" targetID="img2" accept="image/gif, image/jpeg, image/png"/>
+									上傳圖片
+								</label>
+							</div>
+						</div>
+						<div class="recipe-card-content-right">
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="份量(人)"><br>
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="料理時間(min)">
+							<textarea class="recipe-textarea" placeholder="食譜內容"></textarea>
+						</div>
+					</div>
+					<input class="recipe-submit-button" type="submit" value="送出">
+				</form>
+			</div>
+
+			<div class="recipe-card">
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="upload-date">
+						<tr>
+							<td>上傳日期:</td>
+							<td>123456789</td>
+						</tr>
+					</div>
+					<div class="recipe-card-title">
+						<input type="text" name="" placeholder="食譜名稱">
+					</div>
+					<div class="recipe-card-content">
+						<div class="recipe-card-content-left">
+							<div class="recipe-photo">
+								<img class="img100" id="img2" src="#"/>
+							</div>
+							<div class="recipe-select-photo">
+								<label>
+									<input type="file" style="display:none;" onchange="readURL(this)" targetID="img2" accept="image/gif, image/jpeg, image/png"/>
+									上傳圖片
+								</label>
+							</div>
+						</div>
+						<div class="recipe-card-content-right">
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="份量(人)"><br>
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="料理時間(min)">
+							<textarea class="recipe-textarea" placeholder="食譜內容"></textarea>
+						</div>
+					</div>
+					<input class="recipe-submit-button" type="submit" value="送出">
+				</form>
+			</div>
+
+			<div class="recipe-card">
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="upload-date">
+						<tr>
+							<td>上傳日期:</td>
+							<td>123456789</td>
+						</tr>
+					</div>
+					<div class="recipe-card-title">
+						<input type="text" name="" placeholder="食譜名稱">
+					</div>
+					<div class="recipe-card-content">
+						<div class="recipe-card-content-left">
+							<div class="recipe-photo">
+								<img class="img100" id="img2" src="#"/>
+							</div>
+							<div class="recipe-select-photo">
+								<label>
+									<input type="file" style="display:none;" onchange="readURL(this)" targetID="img2" accept="image/gif, image/jpeg, image/png"/>
+									上傳圖片
+								</label>
+							</div>
+						</div>
+						<div class="recipe-card-content-right">
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="份量(人)"><br>
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="料理時間(min)">
+							<textarea class="recipe-textarea" placeholder="食譜內容"></textarea>
+						</div>
+					</div>
+					<input class="recipe-submit-button" type="submit" value="送出">
+				</form>
+			</div>
+
+			<div class="recipe-card">
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="upload-date">
+						<tr>
+							<td>上傳日期:</td>
+							<td>123456789</td>
+						</tr>
+					</div>
+					<div class="recipe-card-title">
+						<input type="text" name="" placeholder="食譜名稱">
+					</div>
+					<div class="recipe-card-content">
+						<div class="recipe-card-content-left">
+							<div class="recipe-photo">
+								<img class="img100" id="img2" src="#"/>
+							</div>
+							<div class="recipe-select-photo">
+								<label>
+									<input type="file" style="display:none;" onchange="readURL(this)" targetID="img2" accept="image/gif, image/jpeg, image/png"/>
+									上傳圖片
+								</label>
+							</div>
+						</div>
+						<div class="recipe-card-content-right">
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="份量(人)"><br>
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="料理時間(min)">
+							<textarea class="recipe-textarea" placeholder="食譜內容"></textarea>
+						</div>
+					</div>
+					<input class="recipe-submit-button" type="submit" value="送出">
+				</form>
+			</div>
+
+			<div class="recipe-card">
+				<form action="" method="post" enctype="multipart/form-data">
+					<div class="upload-date">
+						<tr>
+							<td>上傳日期:</td>
+							<td>123456789</td>
+						</tr>
+					</div>
+					<div class="recipe-card-title">
+						<input type="text" name="" placeholder="食譜名稱">
+					</div>
+					<div class="recipe-card-content">
+						<div class="recipe-card-content-left">
+							<div class="recipe-photo">
+								<img class="img100" id="img2" src="#"/>
+							</div>
+							<div class="recipe-select-photo">
+								<label>
+									<input type="file" style="display:none;" onchange="readURL(this)" targetID="img2" accept="image/gif, image/jpeg, image/png"/>
+									上傳圖片
+								</label>
+							</div>
+						</div>
+						<div class="recipe-card-content-right">
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="份量(人)"><br>
+							<input onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')" type="text" name="" placeholder="料理時間(min)">
+							<textarea class="recipe-textarea" placeholder="食譜內容"></textarea>
+						</div>
+					</div>
+					<input class="recipe-submit-button" type="submit" value="送出">
+				</form>
+			</div>
+		</div>
+
+	<div class="page-button bottom-page-button">
+			<a href="#" class="previous">&laquo; 上一頁</a>
+			<a href="#" class="Next-Previous">1</a>
+			<a href="#" class="Next-Previous">2</a>
+			<a href="#" class="next">下一頁 &raquo;</a>
+		</div>
+</div>
+
+
+	<footer>
+		<p class="footer-title">mushroom hunter</p>
+		<hr>
+		<div class="columns-3">
+			<div class="trademark"></div>
+			<div class="middle-font">
+				<p class="middle-title">聯絡我們</p>
+				<p>桃園市中壢區中北路200號</p>
+				<p>電話：+886-03-265-9999 , +886-03-456-3171</p>
+				<p>傳真：+886-03-265-8888 , +886-03-456-3176</p>
+				<p class="middle-time">服務時間：沒有服務</p>
+			</div>
+			<div class="mailto">
+				<form action="" method="post">
+					<select class="select" name="">
+							<option disabled selected hidden>意見分類</option>
+							<option style="color:black;" value="">服務態度</option>
+							<option style="color:black;" value="">菇菇品質</option>
+							<option style="color:black;" value="">配送速度</option>
+						</select><br>
+					<input class="input" type="email" name="email" placeholder="Email"><br>
+					<input class="input" type="tel" name="phone" placeholder="連絡電話"><br>
+					<textarea class="response" class="" name="response" placeholder="您的訊息"></textarea><br>
+					<input class="submit" type="submit" value="送出">
+				</form>
+			</div>
+		</div>
+	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script src="js/memberprofile.js"></script>
+	<script src="js/good.js"></script>
+
+
+</body>
+</html>

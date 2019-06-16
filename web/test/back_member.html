@@ -1,0 +1,91 @@
+<!--↓↓↓↓↓此為jsp格式請勿更改↓↓↓↓↓-->
+<!--<%@page pageEncoding="utf-8"%>-->
+<!--↑↑↑↑↑此為jsp格式請勿更改↑↑↑↑↑-->
+
+<!DOCTYPE html>
+<!--基本元素複製區塊標頭-->
+<html>
+
+<head>
+    <title>期末專案</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="css/back_index.css">
+
+    <link rel="stylesheet" type="text/css" href="css/back.css">
+</head>
+
+<body>
+    <div id="middle_back">
+        <br>
+
+        <!--後端葉面-->
+        <div class="topic"><b>-後端介面-</b></div>
+        <div style="float: left; margin-top:-4%;margin-left: 5%;"><img src="icon/search.png" style="width: 5%;"><input type="search" placeholder="請輸入會員編號"><input type="button" value="搜尋"></div>
+        <div id="back_t">
+            <div class="back_left">
+                <div> &nbsp;</div>
+                <a href="back_member.jsp" style="color: black">
+                    <div class="about_lable_main"> 會員管理</div>
+                </a>
+                <a href="back_product.jsp" style="color: #444444">
+                    <div class="about_lable">商品管理</div>
+                </a>
+                <a href="back_order.jsp" style="color: #444444">
+                    <div class="about_lable"> 訂單管理</div>
+                </a>
+                <a href="back_common.jsp" style="color: #444444">
+                    <div class="about_lable"> 訪客回饋</div>
+                </a>
+
+            </div>
+
+
+            <div class="back_right">
+                <div class="inner_back">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>會員編號</td>
+                                <td>會員照片</td>
+                                <td>會員姓名</td>
+                                <td>會員帳號</td>
+                                <td>會員密碼</td>
+                                <td>會員地址</td>
+                                <td>會員信箱</td>
+                                <td>購物紀錄</td>
+                                <td>個人食譜</td>
+                                <td>刪除會員</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A0001</td>
+                                <td style="width: 10%;"><img src="icon/pig.gif"></td>
+                                <td>滾滾豬</td>
+                                <td>MIDAS001</td>
+                                <td>10644237</td>
+                                <td>320桃園市中壢區中北路200號</td>
+                                <td>MIDAS@gmail.com</td>
+                                <td class="read_detail" onclick="window.open('window_shopping_detail.html','PHP.NET',config='height=450,width=800,toolbar=no,left=550,top=200');">查看</td>
+                                <td class="read_detail" onclick="window.open('window_member_ recipe.html','PHP.NET',config='height=450,width=1850,toolbar=no,left=15,top=200');">查看</td>
+                                <td><img src="icon/x-button.png" class="back_delete_icon"></td>
+                            </tr>
+
+
+
+                        </tbody>
+
+                    </table>
+
+
+                </div>
+
+            </div>
+            <div style='clear:both;'></div>
+        </div>
+    </div>
+</body>
+
+
+</html>

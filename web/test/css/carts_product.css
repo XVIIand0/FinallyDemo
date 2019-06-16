@@ -1,0 +1,55 @@
+#middle-product {
+    background-color: white;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 8%;
+}
+
+.join_cart_bt {
+      margin-left: 7%;
+     margin-top: 5%;
+    background-color: #ef5350;
+    border: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    cursor: pointer;
+     font-weight: bold;
+}
+
+.join_cart_bt:hover {
+    background-color: coral
+}
+
+
+
+.join_love_bt {
+     background-color: #26C6DA;
+    margin-top: 2%;
+    margin-left: 1%;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.join_love_bt:hover {
+    background-color: 	#00AA55;
+}
+
+.join_cart2_bt {/*追蹤清單按鈕*/
+      margin-left: 5%;
+     margin-top: 5%;
+    background-color: #ef5350;
+    border: none;
+    padding: 5px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+     font-weight: bold;
+}
+
+.join_cart2_bt:hover {
+    background-color: coral;
+    transition: all 0.3s linear;
+}

@@ -1,0 +1,103 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+.window_back {
+
+    min-height: 600px;
+    max-width: 422px;
+}
+
+.window_shopping_back {
+    min-height: 600px;
+    max-width: 800px;
+}
+
+table {
+    border-bottom: 1px solid #666666;
+    width: 100%;
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 50px;
+
+    text-align: center;
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+
+}
+
+.win_table_img {
+    width: 80%;
+}
+
+.win_total {
+    font-size: 12px;
+    text-align: right;
+    width: 30%;
+    margin-left: 70%;
+}
+
+th,
+td {
+    border-bottom: 1px solid #666666;
+
+    height: 10px;
+}
+
+th {
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 10px;
+    color: #272727;
+    font-weight: bold;
+
+}
+
+thead td {
+    font-weight: bolder;
+    background-color: #81c0c0cc;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #e8fff5cc;
+}
+
+.window_text {
+    text-align: left;
+    font-size: 14px;
+}
+
+.window_time {
+    text-align: left;
+    font-size: 12px;
+}
+
+.window_load {
+    font-size: 14px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.win_add_bt {
+    background-color: #26C6DA;
+    margin-left: 50%;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.win_add_bt:hover {
+    background-color: #00AA55;
+}

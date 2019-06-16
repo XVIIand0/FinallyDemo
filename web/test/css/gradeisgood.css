@@ -1,0 +1,470 @@
+html
+{
+	scroll-behavior: smooth;
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft JhengHei";
+	background: #F2F2F2;
+}
+
+*
+{
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.img100
+{
+	width: 100%;
+	height: 100%;
+}
+
+header
+{
+	width: 100%;
+	height: 800px;
+}
+
+.about-mush
+{
+	position: relative;
+	margin-top: 175px;
+	width: 100%;
+	height: 970px;
+}
+
+.bigblock
+{
+	position: relative;
+	width: 100%;
+	height: 811px;
+	display: flex;
+}
+
+.bimg
+{
+	position: relative;
+	width: 50%;
+	height: 100%;
+}
+
+.description
+{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.little-title
+{
+	padding: 15px 30px 0px 30px;
+	margin-bottom: 0px;
+	font-size: 25pt;
+	font-weight: bold;
+	color: #59401F;
+}
+
+.text1>hr
+{
+	width: 40%;
+	border:2.5px solid #59401F;
+	margin-left: 32px;
+}
+
+.little-content
+{
+	padding: 15px 30px 15px 30px;
+	font-size: 15pt;
+	color: #666;
+}
+
+.text1
+{
+	position: relative;
+	background: #FFFFFF;
+	width: 50%;
+	height: 50%;
+}
+
+.simg1
+{
+	position: relative;
+	width: 50%;
+	height: 50%
+}
+
+.simg2
+{
+	position: relative;
+	width: 50%;
+	height: 50%
+}
+
+.text2
+{
+	position: relative;
+	background: #FFFFFF;
+	width: 50%;
+	height: 50%
+}
+
+.text2>hr
+{
+	width: 40%;
+	border:2.5px solid #59401F;
+	margin-left: 32px;
+}
+
+.knowledge
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 970px;
+}
+
+.SB
+{
+	position: relative;
+	margin: 0 auto;
+	width: 31.5%;
+	height: 60%;
+}
+
+.ban
+{
+	position: relative;
+	width: 100%;
+	height: 33.3%;
+}
+
+.icon
+{
+	width: 10%;
+	margin-top: 11%;
+	margin-left: 5%;
+	float: left;
+}
+
+.kl-title
+{
+	display: inline-block;
+	font-size: 20pt;
+	color: #666;
+	font-weight: bold;
+	margin-left: 5%;
+	margin-top: 9%;
+	margin-bottom: 0;
+}
+
+.kl-content
+{
+	margin-left: 20%;
+	color: #666;
+}
+
+.about
+{
+	position: relative;
+	height: 500px;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+.about-font
+{
+	font-size: 5em;
+	text-align: center;
+	padding-bottom: 100px;
+	color: #59401F;
+	font-weight: bold;
+}
+
+.ous-font
+{
+	margin-top: -220px;
+	font-size: 5em;
+	text-align: center;
+	padding-bottom: 100px;
+	color: #59401F;
+	font-weight: bold;
+}
+
+.knowledge-font
+{
+	font-size: 5em;
+	text-align: center;
+	margin-top: 200px;
+	margin-bottom: 100px;
+	color: #59401F;
+	font-weight: bold;
+}
+
+.select-photo
+{
+	border: 0;
+	margin-top: 3%;
+	margin-left: 40%;
+	width: 90px;
+	border-radius: 3px;
+	padding: 8px 12px;
+	background: #FF9800;
+	cursor:pointer;
+	color: #F2F2F2;
+	font-size: 12pt;
+	font-family: "Microsoft JhengHei";
+	font-weight: bold;
+	cursor:pointer;
+}
+
+.select-photo:hover
+{
+	background: #2c87f0;
+	transition: 0.3s ease;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 470px;
+  height: 470px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin: auto;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: white;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #59401F;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.change-button
+{
+	margin-top: 80px;
+	margin-left: 871px;
+	border: 0;
+	border-radius: 3px;
+	padding: 12px 55px;
+	background: #FF9800;
+	cursor:pointer;
+	color: #F2F2F2;
+	font-size: 22pt;
+	font-family: "Microsoft JhengHei";
+	font-weight: bold;
+}
+
+.change-button:hover
+{
+	background: #2c87f0;
+	transition: 0.3s ease;
+}
+
+footer
+{
+    z-index: -1;
+	position: relative;
+	background-color: #59401F;
+	margin-top: 300px;
+	bottom: 0;
+	left: 0%;
+	width: 100%;
+	height: 760px;
+}
+
+footer>hr
+{
+	width: 90%;
+}
+
+.footer-title
+{
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+	font-size: 45pt;
+	font-weight: bold;
+}
+
+.trademark
+{
+	border-right: 1px solid white;
+}
+
+.columns-3
+{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 460px;
+}
+
+.middle-title
+{
+	font-size: 24pt;
+	margin-bottom: 100px;
+	font-weight: bold;
+}
+
+.middle-time
+{
+	margin-top: 40px;
+}
+
+.middle-font
+{
+	font-size: 14pt;
+	text-align: center;
+	border-right: 1px solid white;
+	color: white;
+}
+
+.mailto
+{
+	margin-top: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.select
+{
+	padding: 9px;
+	width: 45%;
+	border-radius: 3px;
+	margin-bottom: 3%;
+	border: 0;
+	font-size: 13pt;
+	font-family: "Microsoft JhengHei";
+	color: #757575;
+	background: #F2F2F2;
+	background-color: #F2F2F2;
+}
+
+.input
+{
+	padding: 9px;
+	width: 45%;
+	border-radius: 3px;
+	margin-bottom: 3%;
+	border: 0;
+	font-size: 13pt;
+	font-family: "Microsoft JhengHei";
+
+}
+
+.response
+{
+	padding: 15px;
+	width: 510px;
+	max-width: 100%;
+	height: 200px;
+	border-radius: 3px;
+	border: 0;
+	font-size: 13pt;
+	font-family: "Microsoft JhengHei";
+	resize:none;
+}
+
+.submit
+{
+	border: 0;
+	margin-top: 3%;
+	border-radius: 3px;
+	padding: 8px 12px;
+	background: #FF9800;
+	cursor:pointer;
+	color: #F2F2F2;
+	font-size: 12pt;
+	font-family: "Microsoft JhengHei";
+	font-weight: bold;
+}
+
+.submit:hover
+{
+	background: #2c87f0;
+	transition: 0.3s ease;
+}
+
+#myBtn
+{
+	display: inline-block;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background: #FF9800;
+	color: black;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+#myBtn:hover {
+	transition: 0.3s ease;
+	background-color: #555;
+	color: #F2F2F2;
+}
+
+/* width */
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track
+{
+	background: white; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+	background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+	background: #555; 
+}

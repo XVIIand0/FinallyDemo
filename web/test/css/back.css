@@ -1,0 +1,177 @@
+#middle_back {
+    background-color: white;
+    width: 90%;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    margin-top: 9%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-radius: 2%;
+
+}
+
+
+.back_delete_icon {
+    margin-left: 10%;
+    width: 20%;
+}
+
+
+
+.back_right {
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    float: right;
+    margin-right: 2.5%;
+    background-color: #CFECEC;
+    width: 95%;
+    margin-bottom: 2%;
+    min-height: 600px;
+    /*設定最小高度*/
+}
+.back_left{
+    margin-left: 2%;
+}
+
+
+.inner_feedback {
+    margin-left: 1%;
+}
+
+/*商品管理*/
+.td_width_10 {
+    width: 10%;
+}
+
+.td_width_20 {
+    width: 20%;
+}
+
+.td_width_30 {
+    width: 30%;
+}
+
+.td_width_80 {
+    width: 80%;
+}
+
+.back_p_submit {
+    margin-left: 89%;
+    margin-top: -4%;
+    width: 8%;
+    padding: 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    float: left;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.back_p_submit:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+.back_p_add {
+    margin-left: 80%;
+    margin-top: -4%;
+    width: 8%;
+    padding: 1px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    float: left;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.back_p_add:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+
+/*商品管理結束*/
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 50px;
+    border: 2px solid #3c3c3c;
+    text-align: center;
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+font-size: 18px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #3c3c3c;
+
+    height: 10px;
+}
+
+th {
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 10px;
+    color: #272727;
+    font-weight: bold;
+
+}
+
+thead td {
+    font-weight: bolder;
+    background-color: #00aeaecc;
+    white-space: nowrap;
+}
+
+tbody tr:hover {
+    background: #f0fff0cc;
+}
+
+
+
+.table_width {
+    width: 100%;
+}
+
+/*左邊標籤*/
+.about_lable_main {
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 1%;
+    border-radius: 8px;
+    background-color: #CFECEC;
+    padding: 1%;
+    width: 10%;
+
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+}
+
+.about_lable {
+    float: left;
+    font-weight: bold;
+    margin: 1%;
+    border-radius: 8px;
+    background-color: aliceblue;
+    padding: 1%;
+    width: 10%;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+}
+
+.check {
+    background: url(checked.png);
+}
+
+.read_detail {
+    font-weight: bold;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>新增商品</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/window.css">
+    <link rel="stylesheet" type="text/css" href="css/back.css">
+</head>
+
+<body>
+    <div class="window_shopping_back">
+
+        <p><b>
+                <center>新增商品</center>
+            </b></p>
+
+        <table>
+            <thead>
+                <tr>
+                      
+                        <td>商品編號</td>
+                        <td>圖片</td>
+                        <td >品種</td>
+                        <td>價錢(包)</td>
+                        <td>數量</td>
+                        <td>生長環境</td>
+                        <td >養殖方法</td>
+                        <td>菇菇外觀</td>
+                        <td >食用功效</td>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="td_width_80"></td>
+                    <td class="td_width_20">
+                        <form action="/somewhere/to/upload" enctype="multipart/form-data">
+                        <img class="td_width_80" id="preview_progressbarTW_img" src="#" />
+                        <input type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"/ >
+                        </form>
+                        </td>
+                    <td class="td_width_20"><input type="text"></td>
+                    
+                    <td><input type="text" class="td_width_80"></td>
+                    <td><input type="text" class="td_width_80"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text" ></td>
+                    <td><input type="text" ></td>
+                    <td><input type="text" ></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+<br>
+       <button class="win_add_bt">確定新增</button>
+    </div>
+</body>
+
+</html>
+<script>
+
+function readURL(input){
+
+  if(input.files && input.files[0]){
+
+    var imageTagID = input.getAttribute("targetID");
+
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+
+       var img = document.getElementById(imageTagID);
+
+       img.setAttribute("src", e.target.result)
+
+    }
+
+    reader.readAsDataURL(input.files[0]);
+
+  }
+
+}
+
+</script>
