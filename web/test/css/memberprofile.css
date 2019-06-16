@@ -17,9 +17,7 @@ body
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-.star{
-	text-align: right;
-}
+
 .tab {
   overflow: hidden;
   background-color: #59401F;
@@ -79,7 +77,6 @@ body
 .member-card
 {
 	width: 993px;
-	height: 560px;
 	background: white;
 	margin-left: auto;
 	margin-right: auto;
@@ -116,7 +113,13 @@ body
 
 .member-table tr td
 {
-	padding: 25px;
+	padding: 28px;
+}
+
+.member-input input
+{
+	padding: 8px;
+	width: 160%;
 }
 
 .change-button
@@ -186,7 +189,7 @@ body
 
 .member-change-button
 {
-	margin-top: 70px;
+	margin-top: 280px;
 	margin-left: -225px;
 	border: 0;
 	border-radius: 3px;
@@ -203,40 +206,6 @@ body
 {
 	background: #2c87f0;
 	transition: 0.3s ease;
-}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 300px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
-  animation: fadeEffect 0.3s;
-}
-
-.modal-content {
-  background-color: #FEFEFE;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #888;
-  width: 45%;
-  font-size: 20pt;
-  text-align: center;
-  line-height:183px;
-  border-radius: 3px;
-}
-
-.modal-content input
-{
-	width: 50%;
-	height: 35px;
-	font-size: 16pt;
-	vertical-align:middle
 }
 
 .OK-button
@@ -306,7 +275,6 @@ body
 .order-card
 {
 	width: 993px;
-	height: 380px;
 	background: white;
 	margin-left: auto;
 	margin-right: auto;
@@ -388,6 +356,7 @@ body
 .order-card_bottom
 {
 	padding: 30px;
+	margin-bottom:120px;
 }
 
 
@@ -441,6 +410,84 @@ margin-top: 15px;
 {
 	background: #2c87f0;
 	transition: 0.3s ease;
+}
+
+.buying_order_card
+{
+	width: 993px;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-radius: 3px 3px;
+}
+
+.first_card_content
+{
+	padding-top: 30px;
+}
+
+.order-card_bottom
+{
+	padding-top: 0;
+	line-height:1;
+}
+
+.order_buying_time
+{
+	display: inline;
+}
+
+.order_img_area
+{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.order_img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.order_name
+{
+	padding: 0px 0px 0px 23px;
+	display: inline;
+	font-size: 22pt;
+}
+
+.order_quantity
+{
+	padding: 0px 0px 0px 23px;
+	font-size: 17pt;
+	color: #757575;
+}
+
+.order_pay
+{
+	margin-left: 94%;
+	display: inline;
+	font-size: 17pt;
+	color: #757575;
+}
+
+.order_content
+{
+	border-bottom: 1px solid rgba(0,0,0,.09);
+}
+
+.order_total
+{
+	margin-left: 84.2%;
+}
+
+.total_text
+{
+	display: inline;
+	font-size: 22pt;
+	color: #F04D2D;
 }
 
 .recipe-card
@@ -723,6 +770,12 @@ footer>hr
 
 
 
+/* width */
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
 /* Track */
 ::-webkit-scrollbar-track
 {
@@ -739,4 +792,8 @@ footer>hr
 ::-webkit-scrollbar-thumb:hover
 {
 	background: #555; 
+}
+.star{
+	text-align:right;
+	color:grey;
 }

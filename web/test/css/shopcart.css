@@ -1,0 +1,792 @@
+.topic{
+	text-align:center !important;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    text-align: center;
+    width: 100%;
+}
+
+tr {
+    white-space: nowrap;
+}
+
+th,
+td {
+    border-bottom: 1px solid #e9e4de;
+    height: 160px;
+}
+
+th {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 10px;
+    color: #444;
+    font-weight: bolder;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background: #CFECEC;
+}
+
+.content {
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    background: #ffffff;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+}
+
+.delete {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    background-color:#66CDAA;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.delete:hover {
+    background-color: 	#2E8B57;
+    color: #fff;
+}
+
+.deleteOne {
+    display: block;
+    margin-left: 40%;
+    line-height: 33px;
+    width: 40px;
+    color: #b5b5b5;
+    transition: all 0.2s linear;
+
+    cursor: pointer;
+}
+
+.deleteOne:hover {
+    /*放大*/
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/*刪除按鈕*/
+
+.on {
+    background-color: #eee;
+}
+
+.goodsTitle {
+    color: #c81622;
+}
+
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+    position: relative;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d9d9d9
+}
+
+input[type="checkbox"]:checked::before {
+    content: "\2713";
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #e50232;
+    color: #e50232;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.check {
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 60px;
+}
+
+.goods {
+
+    width: 350px;
+    overflow: hidden;
+}
+
+.goods span {
+    width: 140px;
+    margin-top: 16px;
+    text-align: left;
+    float: left;
+}
+
+.price {
+    width: 130px;
+}
+
+.count {
+    width: 90px;
+}
+
+.count .add,
+.count input,
+.count .reduce {
+    float: left;
+    margin-right: -1px;
+    position: relative;
+    z-index: 0;
+}
+
+.count .add,
+.count .reduce {
+    height: 25px;
+    width: 17px;
+   
+    background: #C4C1C1;
+    text-align: center;
+    line-height: 23px;
+    color: #444;
+    font-size: 21px;
+}
+
+.count .add:hover,
+.count .reduce:hover {
+    color: #c81622;
+    z-index: 3;
+    border-color: #c81622;
+    cursor: pointer;
+}
+
+.count input {
+    width: 50px;
+    height: 25px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.subtotal {
+    width: 150px;
+    color: red;
+    font-weight: bold;
+}
+
+.goods img {
+    width: 45%;
+
+    float: left;
+}
+
+.cartFooter {
+    width: 100%;
+    margin-top: 10px;
+    color: #666;
+    height: 65px;
+
+    background-color:#CCFF99cc;
+    padding: 0.5%;
+    position: relative;
+    z-index: 8;
+}
+
+.cartFooter div {
+    line-height: 50px;
+    height: 50px;
+}
+
+.cartFooter a {
+    margin-top: 4px;
+    margin-right: 20px;
+}
+
+.selall {
+    width: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
+.selallSPAN:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.cartFooter .select-all {
+    width: 100px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 5px;
+    color: #666;
+}
+
+.cartFooter .closing {
+    height: 48px;
+    border-left: 2px solid #FFB6C1cc;
+    width: 8%;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    background: #F4A460cc;
+    cursor: pointer;
+}
+
+.cartFooter .closing:hover {
+    color: #fff;
+    background-color: #FF6347;
+}
+
+.cartFooter .total {
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.cartFooter #priceTotal,
+.cartFooter #selectedTotal {
+    color: red;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+}
+
+.cartFooter .selected {
+    cursor: pointer;
+	margin-top:-2%;
+}
+
+.cartFooter .selected .arrow {
+    position: relative;
+    top: -3px;
+    margin-left: 3px;
+}
+
+.cartFooter .selected .down {
+    position: relative;
+    top: 3px;
+    display: none;
+}
+
+.show .selected .down {
+    display: inline;
+}
+
+.show .selected .up {
+    display: none;
+}
+
+.cartFooter .selected:hover .arrow {
+    color: red;
+}
+
+.cartFooter .selected-view {
+    width: 1000px;
+    border: 2px solid #c81622cc;
+    position: absolute;
+    height: auto;
+    background: #B8D7D7;
+    z-index: 9;
+    bottom: 48px;
+    left: -1px;
+    display: none;
+}
+
+.show .selected-view {
+    display: block;
+}
+
+.cartFooter .selected-view div {
+    height: auto;
+}
+
+.cartFooter .selected-view img {
+    width: 130px;
+}
+
+.cartFooter .selected-view .arrow {
+    font-size: 30px;
+    line-height: 100%;
+    color: #c81622;
+    position: absolute;
+    right: 282px;
+    bottom: -15px;
+}
+
+.cartFooter .selected-view .arrow span {
+    color: #B8D7D7;
+    position: absolute;
+    left: 0px;
+    bottom: 2px;
+}
+
+#selectedViewList {
+    padding: 20px;
+    margin-bottom: -20px;
+}
+
+#selectedViewList div {
+    display: inline-block;
+    position: relative;
+    width: 130px;
+
+    border: 1px solid #ccc;
+    margin: 10px 13px;
+}
+
+#selectedViewList .del {
+    display: none;
+    color: #ffffff;
+    font-size: 14px;
+    position: absolute;
+    bottom: 19px;
+    right: 30px;
+    width: 70px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background: #c81622;
+    cursor: pointer;
+}
+
+#selectedViewList .selCount {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #c81622;
+    border-radius: 16px;
+}
+
+#selectedViewList div:hover span {
+    display: block;
+}
+
+.arrow up {
+    margin-top: 10px;
+}
+
+/*點我查看*/
+
+/*收貨地址CSS*/
+.cartTop {
+    clear: both;
+    height: 45px;
+}
+
+.countBalance {
+    width: 500px;
+    float: left;
+    margin-top: 15px;
+}
+
+.addressDIV {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 17px;
+    margin: 10px 28px 0 0;
+    text-align: center;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.addressDIV span {
+    display: inline-block;
+    width: 150px;
+    height: 100%;
+    transform: skew(20deg);
+
+    background: #FF6347;
+    position: absolute;
+    right: -9px;
+    top: 0;
+}
+
+.addressDIV span::before,
+.addressDIV span::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    background: #FF6347;
+    position: absolute;
+    top: 0;
+    right: -8px;
+}
+
+.addressDIV span::after {
+    right: -16px
+}
+
+.addressDIV span:hover {
+    transform: skew(0deg);
+    transform: skew(0deg);
+}
+
+.devideDIV {
+    height: 70px;
+    line-height: 70px;
+
+}
+
+.devideDIV span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.devideDIV img {
+    width: 30px;
+    height: 30px;
+}
+
+.cartIconDIV {
+    margin-top: 10px;
+}
+
+
+
+
+/*我的最愛css*/
+
+.inner_shopcart {
+    width: 16%;
+    float: left;
+    margin: 1%;
+    margin-left: 0.5%;
+    background-color: white;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    padding: 1%;
+}
+
+.index_shopcart {
+
+    width: 100%;
+
+    margin: 1%;
+    margin-bottom: 2%;
+}
+
+.shopcart_text {
+    font-size: 14px;
+    text-align: center;
+    color: #272727;
+    font-weight: bold;
+}
+
+.shopcart_price {
+    text-align: center;
+    color: #272727;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.shopcart_title {
+
+    color: #272727;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#middle_shop_cart {
+    background-color: #FFFFFFCC;
+    width: 70%;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    margin-top: 9%;
+    margin-left: 15%;
+    margin-right: 10%;
+    padding: 0.2%;
+    margin-bottom: 5%;
+    min-height: 600px;
+
+}
+
+.love_delete {
+    width: 18%;
+    margin-left: 73%;
+    margin-top: -3%;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/*確認資料*/
+#shopcart_im {
+    border: 1px;
+    background-color: pink;
+    width: 70.1%;
+    margin-left: 15%;
+}
+
+
+/*++購物說明按鈕*/
+.sl_bt{
+    width: 15%;
+    margin-left: 40%;
+    font-weight: bold;
+    background-color: #ef5350;
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sl_bt:hover {
+    background-color: darkorange
+}
+
+
+.sl_bt_2{
+    width: 15%;
+    margin-left: 80%;
+   margin-bottom: 2%;
+    font-weight: bold;
+    background-color: pink;
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.sl_bt_2:hover {
+    background-color: powderblue;
+}
+
+
+//
+#middle_shop_order {
+    background-color: white;
+    width: 70%;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    margin-top: 9%;
+    margin-left: 15%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    text-align: left;
+    
+    margin-bottom: 5%;
+}
+
+th,
+td {
+    border-bottom: 1px solid #e9e4de;
+    height: 5px;
+}
+
+th {
+    height: 50px;
+    line-height: 50px;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 10px;
+    color: #272727;
+    font-weight: bolder;
+
+}
+
+tbody tr:hover {
+    background: #CFECEC;
+}
+
+.tfoot_style {
+
+    border-bottom: 1px solid #fff;
+}
+
+.table_width {
+    width: 100%;
+}
+
+.order_before_bt {
+
+    margin-left: 19.5%;
+    background-color: #ef5350;
+    border: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order_before_bt:hover {
+    background-color: coral
+}
+
+.order_next_bt {
+    background-color: #26C6DA;
+
+    margin-left: 34%;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.order_next_bt:hover {
+    background-color: #00AA55;
+}
+
+
+
+.finish_title{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 2%;
+}
+.finish_padding {
+    background-color: 	#ffecec;
+    border-radius: 15px;
+    padding: 1%;
+    
+}
+.finish_num{
+    font-size: 13px;
+}
+
+.finish_before_bt {
+
+
+    background-color: #ef5350;
+    border: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.finish_before_bt:hover {
+    background-color: coral
+}
+
+.finish_next_bt {
+    background-color: #26C6DA;
+
+    margin-left: 69%;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.finish_next_bt:hover {
+    background-color: #00AA55;
+}
+#middle-product {
+    background-color: white;
+    box-shadow: 0px 3px 12px #6c6c6ccc;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 8%;
+}
+
+.join_cart_bt {
+      margin-left: 7%;
+     margin-top: 5%;
+    background-color: #ef5350;
+    border: none;
+    padding: 8px 27px;
+    border-radius: 5px;
+    cursor: pointer;
+     font-weight: bold;
+}
+
+.join_cart_bt:hover {
+    background-color: coral
+}
+
+
+
+.join_love_bt {
+     background-color: #26C6DA;
+    margin-top: 2%;
+    margin-left: 1%;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.join_love_bt:hover {
+    background-color: 	#00AA55;
+}
+
+.join_cart2_bt {/*追蹤清單按鈕*/
+      margin-left: 5%;
+     margin-top: 5%;
+    background-color: #ef5350;
+    border: none;
+    padding: 5px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+     font-weight: bold;
+}
+
+.join_cart2_bt:hover {
+    background-color: coral;
+    transition: all 0.3s linear;
+}

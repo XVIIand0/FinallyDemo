@@ -29,16 +29,16 @@
         <div id="back_t">
             <div class="back_left">
                 <div> &nbsp;</div>
-                <a href="back_member.jsp" style="color:#444444">
+                <a href="b_member.jsp" style="color:#444444">
                     <div class="about_lable"> 會員管理</div>
                 </a>
-                <a href="back_product.jsp" style="color: #444444">
+                <a href="b_product.jsp" style="color: #444444">
                     <div class="about_lable">商品管理</div>
                 </a>
-                <a href="back_order.jsp" style="color: #444444">
+                <a href="b_order.jsp" style="color: #444444">
                     <div class="about_lable"> 訂單管理</div>
                 </a>
-                <a href="back_common.jsp" style="color: black">
+                <a href="b_common.jsp" style="color: black">
                     <div class="about_lable_main"> 訪客回饋</div>
                 </a>
 

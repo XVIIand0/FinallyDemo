@@ -28,7 +28,7 @@
 			for(int i=0;i<gid.length;i++)
 			{	
 			
-			sql="UPDATE goods SET g_type='"+gtype[i]+"',g_price='"+gprice[i]+"',g_storage='"+gstorage[i]+"',g_place='"+gplace[i]+"',g_farm='"+gfarm[i]+"',g_like='"+glike[i]+"',g_eff='"+geff[i]+"' WHERE g_id='"+gid[i]+"'";
+			sql="UPDATE good SET g_type='"+gtype[i]+"',g_price='"+gprice[i]+"',g_storage='"+gstorage[i]+"',g_place='"+gplace[i]+"',g_farm='"+gfarm[i]+"',g_like='"+glike[i]+"',g_eff='"+geff[i]+"' WHERE g_id='"+gid[i]+"'";
 			con.createStatement().executeUpdate(sql); 
 			}
 			out.write("<script language=javascript>alert('修改完成');</script>");

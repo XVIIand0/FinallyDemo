@@ -13,6 +13,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example6;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example6 {
   from { width:0px; height :0px;margin-top:480px;margin-left:240px}
@@ -28,6 +29,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example7;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example7 {
   from { width:0px; height :0px;margin-top:158px;margin-left:79px}
@@ -43,6 +45,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example5;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example5 {
   from { width:0px; height :0px;margin-top:365px;margin-left:182px}
@@ -58,6 +61,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example4;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example4 {
  from { width:0px; height :0px;margin-top:1200px;margin-left:600px}
@@ -73,6 +77,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example3;
   animation-duration: 2s;
+  z-index:99997;
 }
 @-webkit-keyframes example3 {
   from { width:0px; height :0px;margin-top:196px;margin-left:98px}
@@ -88,6 +93,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example1;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example1 {
   from { width:0px; height :0px;margin-top:139px;margin-left:69.5px}
@@ -103,6 +109,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example {
  from { width:0px; height :0px;margin-top:240px;margin-left:120px}
@@ -118,6 +125,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example2;
   animation-duration: 2s;
+  z-index:99998;
 }
 @-webkit-keyframes example2 {
   from { width:0px; height :0px;margin-top:1714px;margin-left:857px}
@@ -132,6 +140,7 @@ body{ margin: 0; padding: 0; }
   -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: example8;
   animation-duration: 2s;
+  z-index:99999;
 }
 @-webkit-keyframes example8 {
   from { width:0px; height :0px;margin-top:170px;margin-left:85px}

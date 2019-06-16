@@ -14,6 +14,38 @@
 </head>
 
 <body>
+   <%
+                                try{
+                                        Cookie getC[]=request.getCookies();
+                                        for(int i=0;i<getC.length;i++)
+                                        {
+                                            if(getC[i].getName().equals("getin"))
+                                            {
+                                                String[] sp=getC[i].getValue().split("-");
+                                                acc=sp[0];
+                                                pas=sp[1];
+                                            }
+                                        }
+                                        sql="SELECT * FROM member WHERE m_ac='"+acc+"' and m_pw='"+pas+"'";
+                                        ResultSet man=con.createStatement().executeQuery(sql);
+                                        man.next();
+                                        if(man.getString("m_level").equals("1"))
+                                        {
+
+                                        }
+                                        else
+                                        {
+                                            out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                            response.setHeader("refresh","0;URL=index.jsp");
+                                        }
+                                    }
+                                catch(Exception e)
+                                    {
+                                        out.write("<script language=javascript>alert('非管理者，無法進入');</script>");
+                                        response.setHeader("refresh","0;URL=index.jsp");
+                                    }
+                               
+                            %>
     <div id="middle_back">
         <br>
 
@@ -29,16 +61,16 @@
         <div id="back_t">
             <div class="back_left">
                 <div> &nbsp;</div>
-                <a href="back_member.jsp" style="color: black">
+                <a href="b_member.jsp" style="color: black">
                     <div class="about_lable_main"> 會員管理</div>
                 </a>
-                <a href="back_product.jsp" style="color: #444444">
+                <a href="b_product.jsp" style="color: #444444">
                     <div class="about_lable">商品管理</div>
                 </a>
-                <a href="back_order.jsp" style="color: #444444">
+                <a href="b_order.jsp" style="color: #444444">
                     <div class="about_lable"> 訂單管理</div>
                 </a>
-                <a href="back_common.jsp" style="color: #444444">
+                <a href="b_common.jsp" style="color: #444444">
                     <div class="about_lable"> 訪客回饋</div>
                 </a>
 

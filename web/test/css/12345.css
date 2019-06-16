@@ -182,7 +182,7 @@
 {
 	position: absolute;
 	left: 35.6%;
-	top: 31%;
+	top: 29.7%;
 }
 
 .hide{
@@ -196,67 +196,100 @@
 {
   position: absolute;
   z-index: 999;
-  width: 220px;
-  height: 133px;
-  top: 20.8%;
-  left: 43.6%;
+  width: 276px;
+  height: 97px;
+  top: 19.8%;
+  left: 72.1%;
   opacity: 0;
+  background: black;
 }
 
 .about
 {
   position: absolute;
   z-index: 999;
-  width: 523px;
-  height: 130px;
-  top: 39.6%;
-  left: 35.1%;
+  width: 245px;
+  height: 70px;
+  top: 36.3%;
+  left: 9.7%;
   opacity: 0;
+<<<<<<< HEAD
+  background: black;
+=======
     
+>>>>>>> cd1930a0c044372ed29edecb34327a17721fcdcb
 }
 
 .vine
 {
   position: absolute;
   z-index: 999;
-  width: 92px;
-  height: 197px;
-  top: 60.7%;
-  left: 46.9%;
+  width: 282px;
+  height: 79px;
+  top: 62.7%;
+  left: 73.3%;
   opacity: 0;
+  background: black;
 }
 
 .connection
 {
   position: absolute;
   z-index: 999;
-  width: 44px;
-  height: 59px;
-  top: 70.8%;
-  left: 35.4%;
+  width: 224px;
+  height: 63px;
+  top: 63.2%;
+  left: 9.9%;
   opacity: 0;
+  background: black;
 }
 
 .overview
 {
   position: absolute;
   z-index: 999;
-  width: 52px;
-  height: 189px;
-  top: 65%;
-  left: 41.2%;
+  width: 232px;
+  height: 84px;
+  top: 46.6%;
+  left: 7.4%;
   opacity: 0;
+  background: black;
 }
 
 .ad
 {
   position: absolute;
   z-index: 999;
-  width: 53px;
-  height: 210px;
-  top: 62.4%;
-  left: 57.8%;
+  width: 233px;
+  height: 80px;
+  top: 41.7%;
+  left: 72.9%;
   opacity: 0;
+  background: black;
+}
+
+.woman
+{
+	position: absolute;
+  	z-index: 999;
+  	width: 233px;
+  	height: 80px;
+  	top: 82.4%;
+  	left: 15.3%;
+  	opacity: 0;
+  	background: black;
+}
+
+.cat
+{
+	position: absolute;
+  	z-index: 999;
+  	width: 130px;
+  	height: 77px;
+  	top: 79.7%;
+  	left: 78.6%;
+  	opacity: 0;
+  	background: black;
 }
 
 .forest_img

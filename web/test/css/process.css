@@ -1,0 +1,36 @@
+.Process_img
+{
+	text-align: center;
+}
+
+.Process_img img
+{
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+	width: 75%;
+}
+
+.go_to_buy
+{
+	border: 0;
+	border-radius: 3px;
+	padding: 20px 55px;
+	background: #FF9800;
+	cursor:pointer;
+	color: #F2F2F2;
+	font-size: 22pt;
+	font-family: "Microsoft JhengHei";
+	font-weight: bold;
+}
+
+.go_to_buy:hover
+{
+	background: #2c87f0;
+	transition: 0.3s ease;
+}
+
+.button_center
+{
+	text-align: center;
+}

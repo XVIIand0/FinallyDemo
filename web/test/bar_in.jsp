@@ -10,9 +10,12 @@
 	 <link rel="stylesheet" href="css/bootstrap.min.css">
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
-<style>
 
-    .rating.rating-1:after { width: 44%; }
+<style>
+html,body{
+	font-family: Microsoft JhengHei;
+}
+   
 </style>
 
 <body>
@@ -20,7 +23,7 @@
         <aside>
             <div class="bar_title">
                 <img class="mark_nv" src="img/mushrooms.png">
-                Mushroom Hunter
+                <a href="index.jsp">Mushroom Hunter</a>
             </div>
             <ul>
                <%
@@ -50,7 +53,7 @@
                                         
                                         	out.println("<li>");
 											out.println("<div class='person'>");
-											out.println("<img src='img/10544146.jpg'>");
+											out.println("<i class='fas fa-3x fa-user'></i>");
 											out.println(" <span class='member_name'>"+"請先登入或註冊!"+"</span>");
 											out.println("<br>");
 											out.println("<span class='m_control'>");
@@ -72,7 +75,7 @@
 									{      
 													out.println("<li>");
 													out.println("<div class='person'>");
-													out.println("<img src='img/10544146.jpg'>");
+													out.println("<i class='fas fa-3x fa-user'></i>");
 													out.println(" <span class='member_name'>"+"歡迎管理員，"+tmp.getString("m_name")+"</span>");
 													out.println("<br>");
 													out.println("<span class='m_control'>");
@@ -86,11 +89,11 @@
 							{
 								out.println("<li>");
 								out.println("<div class='person'>");
-								out.println("<img src='img/10544146.jpg'>");
+								out.println("<img src='"+tmp.getString("m_photo")+"'>");
 								out.println(" <span class='member_name'>"+"歡迎，"+tmp.getString("m_name")+"</span>");
 								out.println("<br>");
 								out.println("<span class='m_control'>");
-								out.println("<span class='member'>"+"<a href='#'>"+"會員中心"+"</a>"+"</span>");
+								out.println("<span class='member'>"+"<a href='member_center.jsp'>"+"會員中心"+"</a>"+"</span>");
 								out.println("<span class='logout'>"+"<a href='logout.jsp'>"+"登出"+"</a>"+"</span>");
 								out.println("</span>");
 								out.println("</div>");
@@ -105,42 +108,45 @@
      
 		 <li>
                     <div class="search_area">
-                        <form class="search" action="#">
-                            <input class="search_bar" type="text" placeholder="Search">
+                        <form class="search" action="search.jsp?target=" method="get">
+                            <input class="search_bar" name="target" type="search" id="target"  placeholder="Search">
                             <button class="search_sendout" placeholder="搜尋" type="submit"><img src="img/search.png" width="100%"></button>
                         </form>
+                        
                     </div>
                 </li>
                 <li>
-                    <button type="button" class="btn_b btn-default_b">魔力</button>
+                   <form action="search.jsp" method="get">
+                    <button type="submit" name="target" value="魔力" class="btn_b btn-default_b">魔力</button>
 
                     <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
 
                     <!-- Indicates a successful or positive action -->
-                    <button type="button" class="btn_b btn-success_b">養生</button>
+                    <button type="submit" name="target" value="養生" class="btn_b btn-success_b">養生</button>
 
                     <!-- Contextual button for informational alert messages -->
-                    <button type="button" class="btn_b btn-info_b">務實</button>
+                    <button type="submit" name="target" value="務實" class="btn_b btn-info_b">務實</button>
 
                     <!-- Indicates caution should be taken with this action -->
-                    <button type="button" class="btn_b btn-warning_b">超能力</button>
+                    <button type="submit" name="target" value="超能力" class="btn_b btn-warning_b">超能力</button>
 
                     <!-- Indicates a dangerous or potentially negative action -->
-                    <button type="button" class="btn_b btn-danger_b">邪惡</button></li>
+                    <button type="submit" name="target" value="邪惡" class="btn_b btn-danger_b">邪惡</button></form>
+					
                 <li>
                     <div class="menu_content">
                         <div class="icon_space">
-                            <img class="icon" src="img/mushrooms.png"><a href="#">購物車</a>
+                            <img class="icon" src="img/mushrooms.png"><a href="shopcart.jsp">購物車</a>
                         </div>
                         <div class="icon_space">
-                            <img class="icon" src="img/mushrooms.png"><a href="#">我的最愛</a>
+                            <img class="icon" src="img/mushrooms.png"><a href="love.jsp">我的最愛</a>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="menu_content">
                         <div class="icon_space">
-                            <img class="icon" src="img/mushrooms.png"><a href="#">商品總覽</a>
+                            <img class="icon" src="img/mushrooms.png"><a href="a_product.jsp">商品總覽</a>
                         </div>
                         <div class="icon_space">
                             <img class="icon" src="img/mushrooms.png"><a href="#">推薦菜譜</a>
@@ -153,14 +159,14 @@
                 <li>
                     <div class="row">
                         <div class="col-sm-4 change_co">
-                            <a href="#">
+                            <a href="process.jsp">
                                 <img class="about_p" width="100%" src="img/file.png">
                                 <br>
                                 <span class="about_us">
                                     購物流程</span></a>
                         </div>
                         <div class="col-sm-4 change_co">
-                            <a href="#">
+                            <a href="index2.jsp">
                                 <img class="about_p" width="100%" src="img/speech-bubble.png">
                                 <br>
                                 <span class="about_us">
@@ -209,18 +215,11 @@
     }
     %>
 
-    <script src="jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
     <div class="img_bg">
         <div class="second_back">
-
-
-
-
-
-
-
 
         </div>
     </div>
@@ -241,20 +240,24 @@
                 <a href="javascript:void(0)" id="loginBtn" class="btn_l btn_rounded">登入</a>
             </div>
             <div class="action_singUp">
-                <form action="#">
+                <form method="post" action="register.jsp">
                     <fieldset>
                         <legend class="title">註冊</legend>
                         <div class="input_block">
                             <div class="input_wrap">
-                                <input type="text" id="sing_account" class="input" placeholder="帳號">
+                                <input name="acc" type="text" id="sing_account" class="input" placeholder="帳號">
+                                <label for="sing_account" class="label_name fa fa-user"></label>
+                            </div>
+							<div class="input_wrap">
+                                <input name="name" type="text" id="sing_account" class="input" placeholder="暱稱">
                                 <label for="sing_account" class="label_name fa fa-user"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="password" class="input sing_pass" placeholder="密碼">
+                                <input name="password" type="password" class="input sing_pass" placeholder="密碼">
                                 <label for="sing_pass" class="label_pass far fa-eye-slash"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="text" id="sing_email" class="input" placeholder="信箱">
+                                <input name="email" type="text" id="sing_email" class="input" placeholder="信箱">
                                 <label for="sing_email" class="label_mail fas fa-envelope"></label>
                             </div>
                         </div>
@@ -272,7 +275,7 @@
                                 <label for="sing_pass" class="label_mail fa fa-user"></label>
                             </div>
                             <div class="input_wrap">
-                                <input type="password" class="input sing_pass" placeholder="密碼" name="pw">
+                                <input type="password" class="input sing_pass" placeholder="密碼" name="psd">
                                 <label for="sing_pass" class="label_pass far fa-eye-slash"></label>
                             </div>
                         </div>
