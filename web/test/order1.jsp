@@ -29,7 +29,7 @@ String total_c = request.getParameter("total_c");
 String gs = request.getParameter("gs");
 String counts = request.getParameter("counts");
 String qs = request.getParameter("qs");
-if(gs=="1"){
+if(total_c!=""){
 try{
                                         Cookie getC[]=request.getCookies();
                                         for(int i=0;i<getC.length;i++)
